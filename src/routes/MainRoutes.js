@@ -1,9 +1,9 @@
-import Layout1 from "~/layouts/layout1";
+import LayoutOne from "~/layouts/LayoutOne";
 import Home from "~/pages/Home";
 
 const MainRoutes = {
   path: "/",
-  element: <Layout1 />,
+  element: <LayoutOne />,
   children: [
     {
       path: "/",
