@@ -1,5 +1,7 @@
 import LayoutOne from "~/layouts/LayoutOne";
+import About from "~/pages/About";
 import Home from "~/pages/Home";
+import MyAccount from "~/pages/MyAccount";
 
 const MainRoutes = {
   path: "/",
@@ -8,6 +10,14 @@ const MainRoutes = {
     {
       path: "/",
       element: <Home />,
+    },
+    {
+      path: "/about",
+      element: <About />,
+    },
+    {
+      path: "/my-account",
+      element: <MyAccount />,
     },
   ],
 };
