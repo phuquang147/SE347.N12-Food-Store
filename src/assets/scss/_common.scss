@@ -1430,7 +1430,6 @@ textarea:focus {
     @media #{$xs-layout} {
       padding-right: 15px;
       padding-left: 15px;
-      flex: 100%;
     }
   }
   @media #{$xl-layout} {
@@ -1450,6 +1449,16 @@ textarea:focus {
     margin-left: -15px;
   }
 }
+
+@media (max-width: 768px) {
+  .custom-row-2 {
+    & div[class^="col-"] {
+      flex: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
+
 
 .custom-row-3 {
   display: flex;
