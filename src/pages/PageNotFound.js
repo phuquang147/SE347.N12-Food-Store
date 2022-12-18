@@ -19,7 +19,6 @@ const PageNotFound = () => {
               <div className="error">
                 <h1>404</h1>
                 <h2>OPPS! PAGE NOT FOUND</h2>
-
                 <Link to={process.env.PUBLIC_URL + "/"} className="error-btn">
                   Back to home page
                 </Link>
