@@ -1,5 +1,6 @@
 import LayoutOne from "~/layouts/LayoutOne";
 import Home from "~/pages/Home";
+import PageNotFound from "~/pages/PageNotFound";
 
 const MainRoutes = {
   path: "/",
@@ -8,6 +9,10 @@ const MainRoutes = {
     {
       path: "/",
       element: <Home />,
+    },
+    {
+      path: "/not-found",
+      element: <PageNotFound />,
     },
   ],
 };
