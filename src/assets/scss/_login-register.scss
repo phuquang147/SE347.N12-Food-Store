@@ -1,0 +1,98 @@
+.auth-form-container {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  padding: 60px;
+  text-align: center;
+
+  @media #{$lg-layout} {
+    padding: 50px;
+  }
+  @media #{$xs-layout} {
+    padding: 24px 15px 15px;
+  }
+
+  .auth-heading {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-weight: bold;
+    color: $theme-color;
+  }
+
+  .auth-form {
+    form {
+      input {
+        background-color: transparent;
+        border: 1px solid #ebebeb;
+        color: #333;
+        font-size: 14px;
+        height: 45px;
+        margin-bottom: 30px;
+        padding: 0 15px;
+      }
+      input[type="checkbox"] {
+        height: 15px;
+        margin: 0;
+        position: relative;
+        top: 1px;
+        width: 17px;
+      }
+      .button-box {
+        .login-toggle-btn {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 16px;
+
+          label {
+            color: #242424;
+            font-size: 14px;
+            font-weight: 400;
+          }
+
+          a {
+            color: #242424;
+            float: right;
+            font-size: 14px;
+            transition: all 0.3s ease 0s;
+            &:hover {
+              color: $theme-color;
+            }
+          }
+        }
+
+        button {
+          width: 100%;
+          border: none;
+          background-color: $theme-color;
+          color: #fff;
+          cursor: pointer;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 1;
+          padding: 11px 30px;
+          text-transform: uppercase;
+          transition: all 0.1s linear 0s;
+          &:hover {
+            background-color: $theme-darker-color;
+            box-shadow: 1px 1px 4px $theme-color;
+          }
+        }
+      }
+    }
+  }
+
+  .auth-nav {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+
+    a {
+      font-weight: bold;
+      color: $theme-color;
+
+      &:hover {
+        color: $theme-darker-color;
+      }
+    }
+  }
+}
