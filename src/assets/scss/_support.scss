@@ -1,0 +1,32 @@
+.support-wrap {
+  .support-content {
+    h5 {
+      font-size: 18px;
+      line-height: 24px;
+      margin: 15px 0 15px;
+      color: #494949;
+    }
+    p {
+      font-size: 14px;
+      width: 80%;
+      margin: 0 auto;
+      color: #6a6a6a;
+      @media #{$md-layout} {
+        width: 100%;
+      }
+    }
+  }
+  &:hover .support-content img {
+    animation: 500ms ease-in-out 0s normal none 1 running tada;
+  }
+
+  &.support-padding {
+    padding: 36px 10px 30px;
+    @media #{$lg-layout} {
+      padding: 36px 5px 30px;
+    }
+    @media #{$xs-layout} {
+      padding: 36px 6px 30px;
+    }
+  }
+}

@@ -1,0 +1,246 @@
+.swiper-button-next,
+.swiper-button-prev {
+  color: #999;
+  &:hover {
+    color: $theme-color;
+  }
+  transition: all 0.3s ease 0s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.swiper-button-next {
+  right: 80px;
+  @media #{$md-layout} {
+    right: 50px;
+  }
+  @media #{$sm-layout} {
+    right: 20px;
+  }
+  @media #{$xs-layout} {
+    right: 20px;
+  }
+}
+
+.swiper-button-prev {
+  left: 80px;
+  @media #{$md-layout} {
+    right: 50px;
+  }
+  @media #{$sm-layout} {
+    right: 20px;
+  }
+  @media #{$xs-layout} {
+    right: 20px;
+  }
+}
+
+.slider-area {
+  &:hover .nav-style .swiper-button-next {
+    visibility: visible;
+    opacity: 1;
+  }
+  &:hover .nav-style .swiper-button-prev {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.slider-height {
+  height: 650px;
+  @media #{$xl-layout} {
+    height: 500px;
+  }
+  @media #{$lg-layout} {
+    height: 450px;
+  }
+  @media #{$md-layout} {
+    height: 400px;
+  }
+  @media #{$xs-layout} {
+    height: auto;
+    padding: 50px 0 0;
+    &.slider-height-res {
+      padding: 0;
+    }
+  }
+  @media #{$sm-layout} {
+    padding: 38px 0 0;
+  }
+  &.slider-height-res {
+    @media #{$xs-layout} {
+      position: relative;
+      height: 400px;
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        opacity: 0.5;
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.slider-content {
+  margin-top: -6px;
+  @media #{$xs-layout} {
+    text-align: center;
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 0;
+    margin-left: 135px;
+
+    color: #000000;
+    @media #{$xs-layout} {
+      margin-left: 0;
+    }
+    @media #{$sm-layout} {
+      margin-left: 60px;
+    }
+    &::before {
+      position: absolute;
+      top: 14px;
+      left: -135px;
+
+      width: 120px;
+      height: 2px;
+
+      content: "";
+
+      background-color: #000000;
+      @media #{$xs-layout} {
+        display: none;
+      }
+      @media #{$sm-layout} {
+        left: 80px;
+
+        display: block;
+
+        width: 60px;
+      }
+    }
+  }
+  h1 {
+    font-size: 72px;
+    line-height: 97px;
+    margin: 6px 0 37px;
+    color: #010101;
+    @media #{$xl-layout} {
+      font-size: 60px;
+      line-height: 80px;
+    }
+    @media #{$lg-layout} {
+      font-size: 56px;
+      line-height: 70px;
+    }
+    @media #{$md-layout} {
+      font-size: 45px;
+      line-height: 60px;
+    }
+    @media #{$xs-layout} {
+      font-size: 35px;
+      line-height: 45px;
+    }
+  }
+  .slider-btn {
+    a {
+      font-size: 16px;
+      line-height: 1;
+      display: inline-block;
+      padding: 19px 50px 21px;
+      text-transform: uppercase;
+      color: #010101;
+      border: 1px solid #333;
+      background-color: #eeeff1;
+      @media #{$xs-layout} {
+        padding: 14px 30px 16px;
+      }
+      &:hover {
+        color: #fff;
+        border: 1px solid $theme-color;
+      }
+    }
+  }
+  &.slider-content-fruits {
+    h3 {
+      color: #6eab49;
+      &::before {
+        background-color: #6eab49;
+        @media #{$sm-layout} {
+          left: 45px;
+        }
+      }
+    }
+    h1 {
+      font-size: 71px;
+      @media #{$xl-layout} {
+        font-size: 55px;
+      }
+      @media #{$lg-layout} {
+        font-size: 50px;
+      }
+      @media #{$md-layout} {
+        font-size: 40px;
+      }
+      @media #{$xs-layout} {
+        font-size: 30px;
+        margin: 6px 0 20px;
+      }
+    }
+    .slider-btn {
+      a {
+        font-size: 16px;
+
+        color: #fff;
+        border: 1px solid #6eab49;
+        background-color: #6eab49;
+        &:hover {
+          color: #fff;
+          border: 1px solid $theme-color;
+        }
+      }
+    }
+  }
+}
+
+.single-slider {
+  position: relative;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media #{$xl-layout} {
+    background-position: 50%;
+  }
+  @media #{$lg-layout} {
+    background-position: 42%;
+  }
+  @media #{$xs-layout} {
+    background-position: 30%;
+  }
+  @media #{$sm-layout} {
+    background-position: 22%;
+  }
+}
+
+.slider-content-wrapper {
+  z-index: 99999;
+}
+
+.swiper-slide .slider-content * {
+  -webkit-animation-duration: 1.3s;
+  animation-duration: 1.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
