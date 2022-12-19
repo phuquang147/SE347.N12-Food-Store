@@ -1,5 +1,7 @@
 import LayoutOne from "~/layouts/LayoutOne";
 import Home from "~/pages/Home";
+import Wishlist from "~/pages/Wishlist";
+import Cart from "~/pages/Cart";
 
 const MainRoutes = {
   path: "/",
@@ -8,6 +10,14 @@ const MainRoutes = {
     {
       path: "/",
       element: <Home />,
+    },
+    {
+      path: "/wishlist",
+      element: <Wishlist />,
+    },
+    {
+      path: "/cart",
+      element: <Cart />,
     },
   ],
 };
