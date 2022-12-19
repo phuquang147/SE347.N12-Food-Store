@@ -114,6 +114,9 @@
   @media #{$md-layout} {
     padding: 50px 30px 50px 30px;
   }
+  @media (max-width: 992px) {
+    padding: 50px 30px 50px 30px;
+  }
   @media #{$xs-layout} {
     padding: 50px 30px 50px 30px;
   }

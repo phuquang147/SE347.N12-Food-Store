@@ -126,7 +126,6 @@ const Contact = () => {
                     </div>
                   </div>
                 </form>
-                <p className="form-message" />
               </div>
             </div>
           </div>
