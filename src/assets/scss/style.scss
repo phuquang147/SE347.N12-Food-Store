@@ -1,5 +1,5 @@
 @import "~bootstrap/scss/bootstrap.scss";
-// @import "~swiper/css/swiper.css";
+@import "~swiper/css/swiper.css";
 @import "~animate.css/animate.min.css";
 @import "~lightgallery.js/dist/css/lightgallery.css";
 @import "../css/icons.min.css";
@@ -12,3 +12,5 @@
 @import "support";
 @import "section-title";
 @import "footer";
+@import "banner";
+@import "login-register";
