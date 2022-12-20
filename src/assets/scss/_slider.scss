@@ -36,6 +36,7 @@
 }
 
 .slider-area {
+  overflow: hidden;
   &:hover .nav-style .swiper-button-next {
     visibility: visible;
     opacity: 1;

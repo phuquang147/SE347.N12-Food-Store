@@ -21,9 +21,7 @@ const MobileNavMenu = () => {
               <Link to={process.env.PUBLIC_URL + "/my-account"}>Tài khoản</Link>
             </li>
             <li>
-              <Link to={process.env.PUBLIC_URL + "/login-register"}>
-                Đăng nhập
-              </Link>
+              <Link to={process.env.PUBLIC_URL + "/login"}>Đăng nhập</Link>
             </li>
             <li>
               <Link to={process.env.PUBLIC_URL + "/about"}>Về chúng tôi</Link>

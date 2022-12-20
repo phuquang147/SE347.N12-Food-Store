@@ -8,9 +8,7 @@ const IconGroup = ({ cartData, wishlistData, deleteFromCart }) => {
   };
 
   const triggerMobileMenu = () => {
-    const offcanvasMobileMenu = document.querySelector(
-      "#offcanvas-mobile-menu"
-    );
+    const offcanvasMobileMenu = document.querySelector("#offcanvas-mobile-menu");
     offcanvasMobileMenu.classList.add("active");
   };
 
@@ -23,10 +21,10 @@ const IconGroup = ({ cartData, wishlistData, deleteFromCart }) => {
         <div className="account-dropdown">
           <ul>
             <li>
-              <Link to="/login-register">Đăng nhập</Link>
+              <Link to="/login">Đăng nhập</Link>
             </li>
             <li>
-              <Link to="/login-register">Đăng ký</Link>
+              <Link to="/register">Đăng ký</Link>
             </li>
             <li>
               <Link to="/my-account">Tài khoản</Link>
@@ -38,18 +36,14 @@ const IconGroup = ({ cartData, wishlistData, deleteFromCart }) => {
       <div className="same-style header-wishlist">
         <Link to={process.env.PUBLIC_URL + "/wishlist"}>
           <i className="pe-7s-like" />
-          <span className="count-style">
-            {wishlistData && wishlistData.length ? wishlistData.length : 0}
-          </span>
+          <span className="count-style">{wishlistData && wishlistData.length ? wishlistData.length : 0}</span>
         </Link>
       </div>
 
       <div className="same-style cart-wrap d-none d-lg-block">
         <button className="icon-cart" onClick={(e) => handleClick(e)}>
           <i className="pe-7s-shopbag" />
-          <span className="count-style">
-            {cartData && cartData.length ? cartData.length : 0}
-          </span>
+          <span className="count-style">{cartData && cartData.length ? cartData.length : 0}</span>
         </button>
         <MenuCart cartData={cartData} deleteFromCart={deleteFromCart} />
       </div>
@@ -57,17 +51,12 @@ const IconGroup = ({ cartData, wishlistData, deleteFromCart }) => {
       <div className="same-style cart-wrap d-block d-lg-none">
         <Link className="icon-cart" to={process.env.PUBLIC_URL + "/cart"}>
           <i className="pe-7s-shopbag" />
-          <span className="count-style">
-            {cartData && cartData.length ? cartData.length : 0}
-          </span>
+          <span className="count-style">{cartData && cartData.length ? cartData.length : 0}</span>
         </Link>
       </div>
 
       <div className="same-style mobile-off-canvas d-block d-lg-none">
-        <button
-          className="mobile-aside-button"
-          onClick={() => triggerMobileMenu()}
-        >
+        <button className="mobile-aside-button" onClick={() => triggerMobileMenu()}>
           <i className="pe-7s-menu" />
         </button>
       </div>

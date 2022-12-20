@@ -3,16 +3,26 @@ import Swiper from "react-id-swiper";
 import HeroSliderSingle from "./HeroSliderSingle";
 import sliderData from "~/data/hero-slider";
 
+import "swiper/css/autoplay";
+// import "swiper/css/bundle";
+
+// import "swiper/swiper.scss";
+
 const HeroSlider = () => {
   const params = {
     effect: "fade",
     loop: true,
     speed: 1000,
     autoplay: {
-      delay: 5000,
+      delay: 1000,
       disableOnInteraction: false,
     },
     watchSlidesVisibility: true,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
