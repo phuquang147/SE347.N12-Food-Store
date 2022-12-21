@@ -1418,7 +1418,6 @@ textarea:focus {
 .custom-row-2 {
   display: flex;
   flex-wrap: wrap;
-
   margin-right: -5px;
   margin-left: -5px;
   & div[class^="col-"] {
@@ -1450,6 +1449,16 @@ textarea:focus {
     margin-left: -15px;
   }
 }
+
+@media (max-width: 768px) {
+  .custom-row-2 {
+    & div[class^="col-"] {
+      flex: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
+
 .custom-row-3 {
   display: flex;
   flex-wrap: wrap;

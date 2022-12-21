@@ -6,6 +6,9 @@ import MyAccount from "~/pages/MyAccount";
 import Register from "~/pages/Register";
 import Wishlist from "~/pages/Wishlist";
 import Cart from "~/pages/Cart";
+import PageNotFound from "~/pages/PageNotFound";
+import Contact from "~/pages/Contact";
+import Checkout from "~/pages/Checkout";
 
 const MainRoutes = {
   path: "/",
@@ -38,6 +41,18 @@ const MainRoutes = {
     {
       path: "/cart",
       element: <Cart />,
+    },
+    {
+      path: "/not-found",
+      element: <PageNotFound />,
+    },
+    {
+      path: "/contact",
+      element: <Contact />,
+    },
+    {
+      path: "/checkout",
+      element: <Checkout />,
     },
   ],
 };
