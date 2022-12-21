@@ -6,8 +6,7 @@ const Contact = () => {
   return (
     <Fragment>
       <MetaTags>
-        <title>Flone | Contact</title>
-        <meta name="description" content="Contact of flone react minimalist eCommerce template." />
+        <title>Contact</title>
       </MetaTags>
 
       <div className="contact-area pt-100 pb-100">
@@ -44,7 +43,7 @@ const Contact = () => {
                       <a href="mailto:yourname@email.com">yourname@email.com</a>
                     </p>
                     <p>
-                      <a href="https://yourwebsitename.com">yourwebsitename.com</a>
+                      <a href="http://localhost:3000/">yourwebsitename.com</a>
                     </p>
                   </div>
                 </div>
@@ -57,6 +56,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="contact-social text-center">
+                  <h3>Theo dõi chúng tôi</h3>
                   <h3>Theo dõi chúng tôi</h3>
                   <ul>
                     <li>
@@ -91,6 +91,7 @@ const Contact = () => {
             <div className="col-lg-8 col-md-7">
               <div className="contact-form">
                 <div className="contact-title mb-30">
+                  <h2>Thông tin liên lạc</h2>
                   <h2>Liên hệ</h2>
                 </div>
                 <form className="contact-form-style">
@@ -119,10 +120,6 @@ const Contact = () => {
       </div>
     </Fragment>
   );
-};
-
-Contact.propTypes = {
-  location: PropTypes.object,
 };
 
 export default Contact;
