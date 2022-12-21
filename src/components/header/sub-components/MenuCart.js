@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { useToasts } from "react-toast-notifications";
+import numberWithCommas from "~/utils/number-with-commas";
 
 const MenuCart = ({ cartData, deleteFromCart }) => {
   let cartTotalPrice = 0;
@@ -11,6 +12,7 @@ const MenuCart = ({ cartData, deleteFromCart }) => {
         <Fragment>
           <ul>
             {cartData.map((single, key) => {
+              cartTotalPrice += single.quantity * single.price;
               return (
                 <li className="single-shopping-cart" key={key}>
                   <div className="shopping-cart-img">
@@ -23,7 +25,7 @@ const MenuCart = ({ cartData, deleteFromCart }) => {
                       <Link to={"/product/" + single.id}>{single.name}</Link>
                     </h4>
                     <h6>Số lượng: {single.quantity}</h6>
-                    <span>{`${single.price} VNĐ`}</span>
+                    <span>{`${numberWithCommas(single.price)} VNĐ`}</span>
                   </div>
                   <div className="shopping-cart-delete">
                     <button onClick={() => deleteFromCart(single, addToast)}>
@@ -36,7 +38,7 @@ const MenuCart = ({ cartData, deleteFromCart }) => {
           </ul>
           <div className="shopping-cart-total">
             <h4>
-              Tổng : <span className="shop-total">{cartTotalPrice} VNĐ</span>
+              Tổng : <span className="shop-total">{numberWithCommas(cartTotalPrice)} VNĐ</span>
             </h4>
           </div>
           <div className="shopping-cart-btn btn-hover text-center">

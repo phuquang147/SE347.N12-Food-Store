@@ -3,6 +3,7 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import MetaTags from "react-meta-tags";
 import { connect } from "react-redux";
+import numberWithCommas from "~/utils/number-with-commas";
 
 const Checkout = ({ location, cartItems }) => {
   let cartTotalPrice = 0;
@@ -24,26 +25,26 @@ const Checkout = ({ location, cartItems }) => {
                     <div className="col-lg-6 col-md-6">
                       <div className="billing-info mb-20">
                         <label>Họ và tên lót</label>
-                        <input type="text" />
+                        <input type="text" required />
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-6">
                       <div className="billing-info mb-20">
                         <label>Tên</label>
-                        <input type="text" />
+                        <input type="text" required />
                       </div>
                     </div>
 
                     <div className="col-lg-6 col-md-6">
                       <div className="billing-info mb-20">
                         <label>Số điện thoại</label>
-                        <input type="text" />
+                        <input type="text" required />
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-6">
                       <div className="billing-info mb-20">
                         <label>Email</label>
-                        <input type="email" />
+                        <input type="email" required />
                       </div>
                     </div>
                   </div>
@@ -78,7 +79,9 @@ const Checkout = ({ location, cartItems }) => {
                                 <span className="order-middle-left">
                                   {cartItem.name} X {cartItem.quantity}
                                 </span>{" "}
-                                <span className="order-price">{cartItem.price * cartItem.quantity} VNĐ</span>
+                                <span className="order-price">
+                                  {numberWithCommas(cartItem.price * cartItem.quantity)} VNĐ
+                                </span>
                               </li>
                             );
                           })}
@@ -87,8 +90,7 @@ const Checkout = ({ location, cartItems }) => {
                       <div className="your-order-total">
                         <ul>
                           <li className="order-total">Tổng tiền</li>
-                          <li>{cartTotalPrice} VNĐ</li>
-                          <li>0 VNĐ</li>
+                          <li>{numberWithCommas(cartTotalPrice)} VNĐ</li>
                         </ul>
                       </div>
                     </div>

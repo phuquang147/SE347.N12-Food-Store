@@ -6,8 +6,8 @@ const SectionTitleWithText = ({ spaceTopClass, spaceBottomClass }) => {
     <div className={`${spaceTopClass ? spaceTopClass : ""} ${spaceBottomClass ? spaceBottomClass : ""}`}>
       <div className="container">
         <div className="welcome-content text-center">
-          <h5>Who Are We</h5>
-          <h1>Welcome To Flone</h1>
+          <h5>Giới thiệu</h5>
+          <h1>Chào mừng đến với Flone</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labor et dolore
             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo

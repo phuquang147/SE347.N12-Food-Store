@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import React, { Fragment } from "react";
 import { connect } from "react-redux";
-// import { addToCart } from "../../redux/actions/cartActions";
-// import { addToWishlist } from "../../redux/actions/wishlistActions";
+import { addToCart } from "~/redux/actions/cartActions";
+import { addToWishlist } from "~/redux/actions/wishlistActions";
 import ProductGridListSingle from "./ProductGridListSingle";
 
 const ProductGrid = ({
@@ -24,14 +24,8 @@ const ProductGrid = ({
             product={product}
             addToCart={addToCart}
             addToWishlist={addToWishlist}
-            cartItem={
-              cartItems.filter((cartItem) => cartItem.id === product.id)[0]
-            }
-            wishlistItem={
-              wishlistItems.filter(
-                (wishlistItem) => wishlistItem.id === product.id
-              )[0]
-            }
+            cartItem={cartItems.filter((cartItem) => cartItem.id === product.id)[0]}
+            wishlistItem={wishlistItems.filter((wishlistItem) => wishlistItem.id === product.id)[0]}
             key={product.id}
           />
         );
@@ -57,30 +51,15 @@ const mapStateToProps = (state) => {
   };
 };
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     addToCart: (
-//       item,
-//       addToast,
-//       quantityCount,
-//       selectedProductColor,
-//       selectedProductSize
-//     ) => {
-//       dispatch(
-//         addToCart(
-//           item,
-//           addToast,
-//           quantityCount,
-//           selectedProductColor,
-//           selectedProductSize
-//         )
-//       );
-//     },
-//     addToWishlist: (item, addToast) => {
-//       dispatch(addToWishlist(item, addToast));
-//     },
-//   };
-// };
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (item, addToast, quantityCount, selectedProductColor, selectedProductSize) => {
+      dispatch(addToCart(item, addToast, quantityCount, selectedProductColor, selectedProductSize));
+    },
+    addToWishlist: (item, addToast) => {
+      dispatch(addToWishlist(item, addToast));
+    },
+  };
+};
 
-// export default connect(mapStateToProps, mapDispatchToProps)(ProductGrid);
-export default ProductGrid;
+export default connect(mapStateToProps, mapDispatchToProps)(ProductGrid);

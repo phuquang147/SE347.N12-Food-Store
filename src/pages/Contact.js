@@ -53,35 +53,34 @@ const Contact = () => {
                     <i className="fa fa-map-marker" />
                   </div>
                   <div className="contact-info-dec">
-                    <p>Address goes here, </p>
-                    <p>street, Crossroad 123.</p>
+                    <p>Thu Duc City, Viet Nam</p>
                   </div>
                 </div>
                 <div className="contact-social text-center">
-                  <h3>Follow Us</h3>
+                  <h3>Theo dõi chúng tôi</h3>
                   <ul>
                     <li>
-                      <a href="//facebook.com">
+                      <a href="//facebook.com" target="_blank" rel="noreferrer">
                         <i className="fa fa-facebook" />
                       </a>
                     </li>
                     <li>
-                      <a href="//pinterest.com">
+                      <a href="//pinterest.com" target="_blank" rel="noreferrer">
                         <i className="fa fa-pinterest-p" />
                       </a>
                     </li>
                     <li>
-                      <a href="//thumblr.com">
+                      <a href="//thumblr.com" target="_blank" rel="noreferrer">
                         <i className="fa fa-tumblr" />
                       </a>
                     </li>
                     <li>
-                      <a href="//vimeo.com">
+                      <a href="//vimeo.com" target="_blank" rel="noreferrer">
                         <i className="fa fa-vimeo" />
                       </a>
                     </li>
                     <li>
-                      <a href="//twitter.com">
+                      <a href="//twitter.com" target="_blank" rel="noreferrer">
                         <i className="fa fa-twitter" />
                       </a>
                     </li>
@@ -92,23 +91,23 @@ const Contact = () => {
             <div className="col-lg-8 col-md-7">
               <div className="contact-form">
                 <div className="contact-title mb-30">
-                  <h2>Get In Touch</h2>
+                  <h2>Liên hệ</h2>
                 </div>
                 <form className="contact-form-style">
                   <div className="row">
                     <div className="col-lg-6">
-                      <input name="name" placeholder="Name*" type="text" />
+                      <input name="name" placeholder="Họ và tên*" type="text" />
                     </div>
                     <div className="col-lg-6">
                       <input name="email" placeholder="Email*" type="email" />
                     </div>
                     <div className="col-lg-12">
-                      <input name="subject" placeholder="Subject*" type="text" />
+                      <input name="subject" placeholder="Tiêu đề*" type="text" />
                     </div>
                     <div className="col-lg-12">
-                      <textarea name="message" placeholder="Your Message*" defaultValue={""} />
+                      <textarea name="message" placeholder="Lời nhắn của bạn*" defaultValue={""} />
                       <button className="submit" type="submit">
-                        SEND
+                        Gửi
                       </button>
                     </div>
                   </div>

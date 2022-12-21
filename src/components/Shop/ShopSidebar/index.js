@@ -3,10 +3,7 @@ import React from "react";
 // import ShopCategories from "../../components/product/ShopCategories";
 import ShopSearch from "../../product/ShopSearch";
 import ShopTag from "../../product/ShopTag";
-import {
-  getIndividualCategories,
-  getIndividualTags,
-} from "../../../helpers/product";
+import { getIndividualCategories, getIndividualTags } from "../../../helpers/product";
 
 const ShopSidebar = ({ products, getSortParams, sideSpaceClass }) => {
   const uniqueCategories = getIndividualCategories(products);
