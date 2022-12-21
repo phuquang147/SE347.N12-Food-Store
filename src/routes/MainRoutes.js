@@ -8,6 +8,7 @@ import PageNotFound from "~/pages/PageNotFound";
 import Contact from "~/pages/Contact";
 import Checkout from "~/pages/Checkout";
 import Shop from "~/pages/Shop";
+import Product from "~/pages/Product";
 
 const MainRoutes = {
   path: "/",
@@ -48,6 +49,10 @@ const MainRoutes = {
     {
       path: "/shop",
       element: <Shop />,
+    },
+    {
+      path: "/product/:id",
+      element: <Product />,
     },
   ],
 };

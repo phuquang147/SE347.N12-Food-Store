@@ -3,11 +3,6 @@ import Swiper from "react-id-swiper";
 import HeroSliderSingle from "./HeroSliderSingle";
 import sliderData from "~/data/hero-slider";
 
-import "swiper/css/autoplay";
-// import "swiper/css/bundle";
-
-// import "swiper/swiper.scss";
-
 const HeroSlider = () => {
   const params = {
     effect: "fade",
