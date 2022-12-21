@@ -39,7 +39,7 @@ const Cart = ({ cartItems, decreaseQuantity, addToCart, deleteFromCart, deleteAl
                           <th>Giá</th>
                           <th>Số lượng</th>
                           <th>Tổng tiền</th>
-                          <th></th>
+                          <th>Tùy chọn</th>
                         </tr>
                       </thead>
                       <tbody>
