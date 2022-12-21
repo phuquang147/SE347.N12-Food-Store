@@ -38,7 +38,7 @@ const IconGroup = ({ cartData, wishlistData, deleteFromCart }) => {
 
     // dispatch(authActions.logout());
     // dispatch(cartActions.clearCart());
-    addToast("Logout successfully", { appearance: "success", autoDismiss: true, autoDismissTimeout: 3000 });
+    addToast("Đăng xuất thành công", { appearance: "success", autoDismiss: true, autoDismissTimeout: 3000 });
     navigate("/", { replace: true });
   };
 

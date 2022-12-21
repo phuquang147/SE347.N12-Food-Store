@@ -26,7 +26,7 @@ const Login = () => {
     localStorage.setItem("nameGg", name);
     localStorage.setItem("imageGg", imageUrl);
     localStorage.setItem("email", email);
-    addToast("Login successfully", { appearance: "success", autoDismiss: true, autoDismissTimeout: 3000 });
+    addToast("Đăng nhập thành công", { appearance: "success", autoDismiss: true, autoDismissTimeout: 3000 });
     navigate("/", { replace: true });
   };
 
