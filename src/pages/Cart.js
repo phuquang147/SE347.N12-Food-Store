@@ -21,7 +21,7 @@ const Cart = ({ cartItems, decreaseQuantity, addToCart, deleteFromCart, deleteAl
   return (
     <Fragment>
       <MetaTags>
-        <title>Cart</title>
+        <title>Giỏ hàng</title>
       </MetaTags>
       <div className="cart-main-area pt-90 pb-100">
         <div className="container">

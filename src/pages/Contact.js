@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <Fragment>
       <MetaTags>
-        <title>Contact</title>
+        <title>Liên hệ</title>
       </MetaTags>
 
       <div className="contact-area pt-100 pb-100">
@@ -57,7 +57,6 @@ const Contact = () => {
                 </div>
                 <div className="contact-social text-center">
                   <h3>Theo dõi chúng tôi</h3>
-                  <h3>Theo dõi chúng tôi</h3>
                   <ul>
                     <li>
                       <a href="//facebook.com" target="_blank" rel="noreferrer">
@@ -92,7 +91,6 @@ const Contact = () => {
               <div className="contact-form">
                 <div className="contact-title mb-30">
                   <h2>Thông tin liên lạc</h2>
-                  <h2>Liên hệ</h2>
                 </div>
                 <form className="contact-form-style">
                   <div className="row">

@@ -6,7 +6,7 @@ const PageNotFound = () => {
   return (
     <Fragment>
       <MetaTags>
-        <title>Not Found</title>
+        <title>404 | Không tìm thấy trang</title>
       </MetaTags>
       <div className="error-area pt-40 pb-100">
         <div className="container">

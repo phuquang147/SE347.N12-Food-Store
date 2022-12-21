@@ -11,7 +11,7 @@ const Checkout = ({ location, cartItems }) => {
   return (
     <Fragment>
       <MetaTags>
-        <title>Checkout</title>
+        <title>Thanh toán</title>
       </MetaTags>
 
       <div className="checkout-area pt-95 pb-100">

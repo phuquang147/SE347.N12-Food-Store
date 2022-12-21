@@ -9,8 +9,7 @@ const About = ({ location }) => {
   return (
     <Fragment>
       <MetaTags>
-        <title>Flone | About Us</title>
-        <meta name="description" content="About page of flone react minimalist eCommerce template." />
+        <title>Về chúng tôi</title>
       </MetaTags>
 
       <SectionTitleWithText spaceTopClass="pt-100" spaceBottomClass="pb-95" />

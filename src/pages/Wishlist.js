@@ -14,7 +14,7 @@ const Wishlist = ({ location, cartItems, addToCart, wishlistItems, deleteFromWis
   return (
     <Fragment>
       <MetaTags>
-        <title>Wishlist</title>
+        <title>Danh sách yêu thích</title>
       </MetaTags>
       <div className="cart-main-area pt-90 pb-100">
         <div className="container">
