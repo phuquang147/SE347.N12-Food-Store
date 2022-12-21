@@ -1,23 +1,20 @@
 import PropTypes from "prop-types";
 import React, { Fragment } from "react";
 import MetaTags from "react-meta-tags";
-import LayoutOne from "../layouts/LayoutOne";
 
 const Contact = () => {
   return (
     <Fragment>
-      {/* <MetaTags>
+      <MetaTags>
         <title>Flone | Contact</title>
-        <meta
-          name="description"
-          content="Contact of flone react minimalist eCommerce template."
-        />
-      </MetaTags> */}
+        <meta name="description" content="Contact of flone react minimalist eCommerce template." />
+      </MetaTags>
 
       <div className="contact-area pt-100 pb-100">
         <div className="container">
           <div className="contact-map mb-10">
             <iframe
+              title="map"
               className="w-100 h-100"
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d57643.73514508581!2d51.4524426!3d25.4471736!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45e79240aff901%3A0x78b22e86c6d52895!2sLusail%20Stadium!5e0!3m2!1sen!2s!4v1671339648379!5m2!1sen!2s"
               style={{ border: "10" }}
@@ -47,9 +44,7 @@ const Contact = () => {
                       <a href="mailto:yourname@email.com">yourname@email.com</a>
                     </p>
                     <p>
-                      <a href="https://yourwebsitename.com">
-                        yourwebsitename.com
-                      </a>
+                      <a href="https://yourwebsitename.com">yourwebsitename.com</a>
                     </p>
                   </div>
                 </div>
@@ -108,18 +103,10 @@ const Contact = () => {
                       <input name="email" placeholder="Email*" type="email" />
                     </div>
                     <div className="col-lg-12">
-                      <input
-                        name="subject"
-                        placeholder="Subject*"
-                        type="text"
-                      />
+                      <input name="subject" placeholder="Subject*" type="text" />
                     </div>
                     <div className="col-lg-12">
-                      <textarea
-                        name="message"
-                        placeholder="Your Message*"
-                        defaultValue={""}
-                      />
+                      <textarea name="message" placeholder="Your Message*" defaultValue={""} />
                       <button className="submit" type="submit">
                         SEND
                       </button>
@@ -135,8 +122,8 @@ const Contact = () => {
   );
 };
 
-// Contact.propTypes = {
-//   location: PropTypes.object,
-// };
+Contact.propTypes = {
+  location: PropTypes.object,
+};
 
 export default Contact;

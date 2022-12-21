@@ -5,13 +5,10 @@ import { Link } from "react-router-dom";
 const PageNotFound = () => {
   return (
     <Fragment>
-      {/* <MetaTags>
+      <MetaTags>
         <title>Flone | Not Found</title>
-        <meta
-          name="description"
-          content="404 page of flone react minimalist eCommerce template."
-        />
-      </MetaTags> */}
+        <meta name="description" content="404 page of flone react minimalist eCommerce template." />
+      </MetaTags>
       <div className="error-area pt-40 pb-100">
         <div className="container">
           <div className="row justify-content-center">
