@@ -4,11 +4,12 @@ import Paginator from "react-hooks-paginator";
 import MetaTags from "react-meta-tags";
 import { connect } from "react-redux";
 import { getSortedProducts } from "../helpers/product";
-import ShopProducts from "../wrappers/Shop/ShopProducts";
-import ShopSidebar from "../wrappers/Shop/ShopSidebar";
-import ShopTopbar from "../wrappers/Shop/ShopTopbar";
+import ShopProducts from "../components/Shop/ShopProducts/index";
+import ShopSidebar from "../components/Shop/ShopSidebar/index";
+import ShopTopbar from "../components/Shop/ShopTopbar/index";
 
 const Shop = ({ products }) => {
+  console.log('Shop accessed');
   const [layout, setLayout] = useState("grid three-column");
   const [sortType, setSortType] = useState("");
   const [sortValue, setSortValue] = useState("");
@@ -35,17 +36,17 @@ const Shop = ({ products }) => {
     setFilterSortValue(sortValue);
   };
 
-  useEffect(() => {
-    let sortedProducts = getSortedProducts(products, sortType, sortValue);
-    const filterSortedProducts = getSortedProducts(
-      sortedProducts,
-      filterSortType,
-      filterSortValue
-    );
-    sortedProducts = filterSortedProducts;
-    setSortedProducts(sortedProducts);
-    setCurrentData(sortedProducts.slice(offset, offset + pageLimit));
-  }, [offset, products, sortType, sortValue, filterSortType, filterSortValue]);
+  // useEffect(() => {
+  //   let sortedProducts = getSortedProducts(products, sortType, sortValue);
+  //   const filterSortedProducts = getSortedProducts(
+  //     sortedProducts,
+  //     filterSortType,
+  //     filterSortValue
+  //   );
+  //   sortedProducts = filterSortedProducts;
+  //   setSortedProducts(sortedProducts);
+  //   setCurrentData(sortedProducts.slice(offset, offset + pageLimit));
+  // }, [offset, products, sortType, sortValue, filterSortType, filterSortValue]);
 
   return (
     <Fragment>
@@ -59,7 +60,7 @@ const Shop = ({ products }) => {
 
       <div className="shop-area pt-95 pb-100">
         <div className="container">
-          <div className="row">
+        <div className="row">
             <div className="col-lg-3 order-2 order-lg-1">
               {/* shop sidebar */}
               <ShopSidebar
@@ -70,18 +71,24 @@ const Shop = ({ products }) => {
             </div>
             <div className="col-lg-9 order-1 order-lg-2">
               {/* shop topbar default */}
-              <ShopTopbar
+              {/* <ShopTopbar
                 getLayout={getLayout}
                 getFilterSortParams={getFilterSortParams}
                 productCount={products.length}
                 sortedProductCount={currentData.length}
+              /> */}
+              <ShopTopbar
+                getLayout={getLayout}
+                getFilterSortParams={getFilterSortParams}
+                productCount={3}
+                sortedProductCount={2}
               />
 
               {/* shop page content default */}
-              <ShopProducts layout={layout} products={currentData} />
+              {/* <ShopProducts layout={layout} products={currentData} /> */}
 
               {/* shop product pagination */}
-              <div className="pro-pagination-style text-center mt-30">
+              {/* <div className="pro-pagination-style text-center mt-30">
                 <Paginator
                   totalRecords={sortedProducts.length}
                   pageLimit={pageLimit}
@@ -93,7 +100,7 @@ const Shop = ({ products }) => {
                   pagePrevText="«"
                   pageNextText="»"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
