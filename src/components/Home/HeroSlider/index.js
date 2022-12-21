@@ -1,7 +1,6 @@
-import React from "react";
 import Swiper from "react-id-swiper";
+import sliderData from "~/data/hero-slider.json";
 import HeroSliderSingle from "./HeroSliderSingle";
-import sliderData from "~/data/hero-slider";
 
 const HeroSlider = () => {
   const params = {

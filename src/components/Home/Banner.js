@@ -1,9 +1,4 @@
 import { Link } from "react-router-dom";
-import banner1 from "~/assets/images/banner/banner1.png";
-import banner2 from "~/assets/images/banner/banner2.png";
-import banner3 from "~/assets/images/banner/banner3.png";
-import banner4 from "~/assets/images/banner/banner4.png";
-import banner5 from "~/assets/images/banner/banner5.png";
 
 const Banner = () => {
   return (
@@ -14,7 +9,7 @@ const Banner = () => {
             <div className="col-lg-12">
               <div className="single-banner mb-20">
                 <Link to="/shop">
-                  <img src={banner1} alt="" />
+                  <img src="/assets/img/banner/banner1.png" alt="" />
                 </Link>
                 <div className="banner-content banner-position-1">
                   <h3>Táo Xanh</h3>
@@ -30,7 +25,7 @@ const Banner = () => {
             <div className="col-lg-12">
               <div className="single-banner mb-20">
                 <Link to="/shop">
-                  <img src={banner2} alt="" />
+                  <img src="/assets/img/banner/banner2.png" alt="" />
                 </Link>
                 <div className="banner-content banner-position-1">
                   <h3>Cam Chín</h3>
@@ -48,7 +43,7 @@ const Banner = () => {
         <div className="col-lg-4 col-md-6">
           <div className="single-banner mb-20">
             <Link to="/shop">
-              <img src={banner3} alt="" />
+              <img src="/assets/img/banner/banner3.png" alt="" />
             </Link>
             <div className="banner-content-2 banner-position-2">
               <h2>Trái cây </h2>
@@ -62,7 +57,7 @@ const Banner = () => {
             <div className="col-lg-12 col-md-6">
               <div className="single-banner mb-20">
                 <Link to="/shop">
-                  <img src={banner4} alt="" />
+                  <img src="/assets/img/banner/banner4.png" alt="" />
                 </Link>
                 <div className="banner-content banner-position-2">
                   <h3>Bắp Chín</h3>
@@ -78,7 +73,7 @@ const Banner = () => {
             <div className="col-lg-12 col-md-6">
               <div className="single-banner mb-20">
                 <Link to="/shop">
-                  <img src={banner5} alt="" />
+                  <img src="/assets/img/banner/banner5.png" alt="" />
                 </Link>
                 <div className="banner-content banner-position-2">
                   <h3>Ổi xanh</h3>

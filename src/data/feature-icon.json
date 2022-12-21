@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "image": "/assets/img/feature-icons/icon1.png",
+    "title": "Miễn phí giao hàng",
+    "subtitle": "Miễn phí giao hàng với tất cả đơn"
+  },
+  {
+    "id": 2,
+    "image": "/assets/img/feature-icons/icon1.png",
+    "title": "Hỗ trợ 24/7",
+    "subtitle": "Đội ngũ hỗ trợ 24/7"
+  },
+  {
+    "id": 3,
+    "image": "/assets/img/feature-icons/icon1.png",
+    "title": "Hoàn tiền",
+    "subtitle": "Lỗi hàng hoàn tiền"
+  }
+]

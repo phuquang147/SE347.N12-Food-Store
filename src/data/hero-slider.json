@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Tự Nhiên Và Thanh Mát",
+    "subtitle": "100% Trái cây hữu cơ",
+    "image": "/assets/img/slider/slider1.jpg",
+    "url": "/shop"
+  },
+  {
+    "id": 2,
+    "title": "Tự nhiên Và Tốt Cho Sức Khỏe",
+    "subtitle": "100% Rau củ hữu cơ",
+    "image": "/assets/img/slider/slider2.jpg",
+    "url": "/shop"
+  }
+]
