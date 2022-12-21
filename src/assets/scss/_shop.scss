@@ -1,0 +1,239 @@
+/*---- 18. Shop page  -------*/
+
+.shop-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media #{$xs-layout} {
+    display: block;
+  }
+  @media #{$sm-layout} {
+    display: flex;
+  }
+  .select-shoing-wrap {
+    display: flex;
+    @media #{$xs-layout} {
+      display: block;
+    }
+    @media #{$sm-layout} {
+      display: flex;
+    }
+    .shop-select {
+      margin-right: 50px;
+      select {
+        font-size: 14px;
+
+        min-width: 143px;
+        padding: 5px;
+
+        color: #606060;
+        border: 1px solid #e6e6e6;
+      }
+    }
+    p {
+      margin: 0;
+
+      color: #606060;
+      @media #{$xs-layout} {
+        margin: 5px 0 10px;
+      }
+      @media #{$sm-layout} {
+        margin: 0;
+      }
+    }
+  }
+  .shop-tab {
+    a,
+    button {
+      font-size: 18px;
+
+      margin-left: 20px;
+      padding: 0;
+
+      color: #606060;
+      border: none;
+      background: none;
+      &:first-child {
+        margin-left: 0;
+      }
+      &.active {
+        color: #fa6bff;
+      }
+    }
+  }
+}
+
+.pro-pagination-style {
+  @media #{$xs-layout} {
+    &.mt-30 {
+      margin-top: 10px;
+    }
+  }
+  ul {
+    li {
+      display: inline-block;
+
+      margin: 0 4px;
+      a,
+      button {
+        font-size: 16px;
+        line-height: 43px;
+
+        display: inline-block;
+
+        width: 43px;
+        height: 43px;
+        padding: 0;
+
+        text-align: center;
+
+        color: $theme-color;
+        border: none;
+        border-radius: 100% !important;
+        background: none;
+        box-shadow: 0 0 12px 0.8px rgba(0, 0, 0, 0.1);
+        &:hover {
+          color: #fff;
+          background-color: $theme-color;
+        }
+      }
+      a.active {
+        color: #fff;
+        background-color: $theme-color;
+        box-shadow: none;
+        &:hover {
+          background-color: #333;
+        }
+      }
+      a.prev,
+      a.next {
+        font-size: 17px;
+
+        color: $theme-color;
+        background-color: #f6f6f6;
+        box-shadow: none;
+        &:hover {
+          color: #fff;
+          background-color: $theme-color;
+        }
+      }
+
+      &.page-item {
+        &.active {
+          .page-link {
+            border-color: $theme-color;
+            background-color: $theme-color;
+            box-shadow: 0 0 12px 0.8px rgba(0, 0, 0, 0.1) !important;
+            &:focus {
+              box-shadow: none;
+            }
+          }
+        }
+        .page-link {
+          box-shadow: 0 0 12px 0.8px rgba(0, 0, 0, 0.1) !important;
+          &:focus {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$xs-layout} {
+  .shop-area.pb-100 {
+    padding-bottom: 45px;
+  }
+}
+
+.shop-bottom-area {
+  .col-xl-4 {
+    transition: 0.5s;
+  }
+  .grid {
+    .shop-list-wrap {
+      display: none;
+    }
+
+    &.two-column {
+      .col-xl-4 {
+        flex: 1 0 50%;
+
+        max-width: 50%;
+
+        transition: 0.5s;
+      }
+    }
+  }
+  .list {
+    .product-wrap {
+      display: none;
+    }
+    &.two-column {
+      & > .col-xl-4 {
+        flex: 1 0 50%;
+
+        max-width: 50%;
+
+        transition: 0.5s;
+
+        @media #{$lg-layout} {
+          flex: 1 0 100%;
+
+          max-width: 100%;
+        }
+        @media #{$md-layout} {
+          flex: 1 0 100%;
+
+          max-width: 100%;
+        }
+        @media #{$xs-layout} {
+          flex: 1 0 100%;
+
+          max-width: 100%;
+        }
+      }
+    }
+
+    & > .col-xl-4 {
+      flex: 1 0 100%;
+
+      max-width: 100%;
+
+      transition: 0.5s;
+    }
+  }
+}
+
+.shop-list-compare {
+  button {
+    font-size: 20px;
+
+    padding: 0;
+
+    border: none;
+    background: none;
+    &:hover,
+    &.active {
+      color: $theme-color;
+    }
+  }
+}
+
+.shop-area {
+  .container-fluid {
+    padding: 0 70px;
+    @media #{$xl-layout} {
+      padding: 0 15px;
+    }
+    @media #{$lg-layout} {
+      padding: 0 30px;
+    }
+    @media #{$md-layout} {
+      padding: 0 40px;
+    }
+    @media #{$xs-layout} {
+      padding: 0 15px;
+    }
+  }
+}
