@@ -9,7 +9,7 @@ const HeroSlider = () => {
     loop: true,
     speed: 1000,
     autoplay: {
-      delay: 1000,
+      delay: 5000,
       disableOnInteraction: false,
     },
     watchSlidesVisibility: true,

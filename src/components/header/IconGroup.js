@@ -68,10 +68,10 @@ const IconGroup = ({ cartData, wishlistData, deleteFromCart }) => {
 
   return (
     <div className="header-right-wrap">
-      <div className="same-style account-setting d-none d-lg-block">
+      <div className="same-style account-setting d-lg-block">
         <button onClick={(e) => handleClick(e)}>
           {avatarGg || avatarFb ? (
-            <img className="user-avatar" src={avatarGg || avatarFb} alt="Avatar Google" referrerPolicy="no-referrer" />
+            <img className="user-avatar" src={avatarGg || avatarFb} alt="Avatar User" referrerPolicy="no-referrer" />
           ) : (
             <i className="pe-7s-user-female" />
           )}

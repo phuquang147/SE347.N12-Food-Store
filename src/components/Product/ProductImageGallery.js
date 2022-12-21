@@ -7,12 +7,7 @@ const ProductImageGallery = ({ product }) => {
   const [thumbnailSwiper, getThumbnailSwiper] = useState(null);
 
   useEffect(() => {
-    if (
-      gallerySwiper !== null &&
-      gallerySwiper.controller &&
-      thumbnailSwiper !== null &&
-      thumbnailSwiper.controller
-    ) {
+    if (gallerySwiper !== null && gallerySwiper.controller && thumbnailSwiper !== null && thumbnailSwiper.controller) {
       gallerySwiper.controller.control = thumbnailSwiper;
       thumbnailSwiper.controller.control = gallerySwiper;
     }
@@ -50,16 +45,9 @@ const ProductImageGallery = ({ product }) => {
               product.image.map((single, key) => {
                 return (
                   <div key={key}>
-                    <LightgalleryItem
-                      group="any"
-                      src={process.env.PUBLIC_URL + single}
-                    >
+                    <LightgalleryItem group="any" src={process.env.PUBLIC_URL + single}>
                       <div className="single-image">
-                        <img
-                          src={process.env.PUBLIC_URL + single}
-                          className="img-fluid"
-                          alt=""
-                        />
+                        <img src={process.env.PUBLIC_URL + single} className="img-fluid" alt="" />
                       </div>
                     </LightgalleryItem>
                   </div>
@@ -75,11 +63,7 @@ const ProductImageGallery = ({ product }) => {
               return (
                 <div key={key}>
                   <div className="single-image">
-                    <img
-                      src={process.env.PUBLIC_URL + single}
-                      className="img-fluid"
-                      alt=""
-                    />
+                    <img src={process.env.PUBLIC_URL + single} className="img-fluid" alt="" />
                   </div>
                 </div>
               );
