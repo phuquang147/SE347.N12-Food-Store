@@ -4,6 +4,7 @@ import Home from "~/pages/Home";
 import Login from "~/pages/Login";
 import MyAccount from "~/pages/MyAccount";
 import Register from "~/pages/Register";
+import Shop from "~/pages/Shop";
 
 const MainRoutes = {
   path: "/",
@@ -29,6 +30,10 @@ const MainRoutes = {
       path: "/register",
       element: <Register />,
     },
+    {
+      path: "/shop",
+      element: <Shop />,
+    }
   ],
 };
 
