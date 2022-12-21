@@ -56,7 +56,7 @@ const Wishlist = ({ location, cartItems, addToCart, wishlistItems, deleteFromWis
                               </td>
 
                               <td className="product-price-cart">
-                                <span className="amount">{numberWithCommas(wishlistItem.price)}</span>
+                                <span className="amount">{numberWithCommas(wishlistItem.price)} VNĐ</span>
                               </td>
 
                               <td className="product-wishlist-cart">
