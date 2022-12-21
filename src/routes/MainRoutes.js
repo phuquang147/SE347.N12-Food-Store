@@ -4,6 +4,8 @@ import Home from "~/pages/Home";
 import Login from "~/pages/Login";
 import MyAccount from "~/pages/MyAccount";
 import Register from "~/pages/Register";
+import Wishlist from "~/pages/Wishlist";
+import Cart from "~/pages/Cart";
 
 const MainRoutes = {
   path: "/",
@@ -28,6 +30,14 @@ const MainRoutes = {
     {
       path: "/register",
       element: <Register />,
+    },
+    {
+      path: "/wishlist",
+      element: <Wishlist />,
+    },
+    {
+      path: "/cart",
+      element: <Cart />,
     },
   ],
 };
