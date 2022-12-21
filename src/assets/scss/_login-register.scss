@@ -80,6 +80,33 @@
     }
   }
 
+  .methods-login {
+    p {
+      margin-top: 20px;
+    }
+
+    img {
+      cursor: pointer;
+    }
+
+    & img:first-of-type {
+      margin-right: 20px;
+    }
+
+    & img:last-of-type {
+      margin-left: 20px;
+    }
+
+    .kep-login-facebook.metro {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      // width: 300px;
+      // height: 60px;
+      // font-size: 14px;
+    }
+  }
+
   .auth-nav {
     margin-top: 24px;
     display: flex;

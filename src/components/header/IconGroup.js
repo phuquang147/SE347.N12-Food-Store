@@ -1,8 +1,26 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useGoogleLogout } from "react-google-login";
+import { Link, useNavigate } from "react-router-dom";
+import { useToasts } from "react-toast-notifications";
 import MenuCart from "./sub-components/MenuCart";
 // import { deleteFromCart } from "../../redux/actions/cartActions";
 
+const clientId = "28621200637-b33nlbjs4h5rpl5fp3d8tkdc3utp87fe.apps.googleusercontent.com";
+
 const IconGroup = ({ cartData, wishlistData, deleteFromCart }) => {
+  const avatarGg = localStorage.getItem("imageGg");
+  const avatarFb = localStorage.getItem("imageFb");
+
+  useEffect(() => {
+    if (avatarFb || avatarGg) {
+      setIsLogin(true);
+    }
+  }, [avatarGg, avatarFb]);
+
+  const [isLogin, setIsLogin] = useState(avatarGg || avatarFb);
+  const navigate = useNavigate();
+  const { addToast } = useToasts();
+
   const handleClick = (e) => {
     e.currentTarget.nextSibling.classList.toggle("active");
   };
@@ -12,11 +30,50 @@ const IconGroup = ({ cartData, wishlistData, deleteFromCart }) => {
     offcanvasMobileMenu.classList.add("active");
   };
 
+  const onLogoutSuccess = () => {
+    localStorage.removeItem("nameGg");
+    localStorage.removeItem("imageGg");
+    localStorage.removeItem("email");
+
+    // dispatch(authActions.logout());
+    // dispatch(cartActions.clearCart());
+    addToast("Logout successfully", { appearance: "success", autoDismiss: true, autoDismissTimeout: 3000 });
+    navigate("/", { replace: true });
+  };
+
+  const onFailure = () => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    console.log("failed");
+  };
+
+  const { signOut } = useGoogleLogout({
+    clientId,
+    onLogoutSuccess,
+    onFailure,
+  });
+
+  const facebookLogout = () => {
+    localStorage.removeItem("imageFb");
+    localStorage.removeItem("nameFb");
+    localStorage.removeItem("email");
+    setIsLogin(false);
+
+    // dispatch(authActions.logout());
+    // dispatch(cartActions.clearCart());
+  };
+
   return (
     <div className="header-right-wrap">
       <div className="same-style account-setting d-none d-lg-block">
         <button onClick={(e) => handleClick(e)}>
-          <i className="pe-7s-user-female" />
+          {avatarGg || avatarFb ? (
+            <img className="user-avatar" src={avatarGg || avatarFb} alt="Avatar Google" referrerPolicy="no-referrer" />
+          ) : (
+            <i className="pe-7s-user-female" />
+          )}
         </button>
         <div className="account-dropdown">
           <ul>
@@ -26,9 +83,12 @@ const IconGroup = ({ cartData, wishlistData, deleteFromCart }) => {
             <li>
               <Link to="/register">Đăng ký</Link>
             </li>
-            <li>
-              <Link to="/my-account">Tài khoản</Link>
-            </li>
+            {isLogin && <li onClick={avatarGg ? signOut : facebookLogout}>Đăng xuất</li>}
+            {isLogin && (
+              <li>
+                <Link to="/my-account">Tài khoản</Link>
+              </li>
+            )}
           </ul>
         </div>
       </div>
