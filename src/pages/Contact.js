@@ -6,8 +6,7 @@ const Contact = () => {
   return (
     <Fragment>
       <MetaTags>
-        <title>Flone | Contact</title>
-        <meta name="description" content="Contact of flone react minimalist eCommerce template." />
+        <title>Contact</title>
       </MetaTags>
 
       <div className="contact-area pt-100 pb-100">
@@ -44,7 +43,7 @@ const Contact = () => {
                       <a href="mailto:yourname@email.com">yourname@email.com</a>
                     </p>
                     <p>
-                      <a href="https://yourwebsitename.com">yourwebsitename.com</a>
+                      <a href="http://localhost:3000/">yourwebsitename.com</a>
                     </p>
                   </div>
                 </div>
@@ -53,12 +52,12 @@ const Contact = () => {
                     <i className="fa fa-map-marker" />
                   </div>
                   <div className="contact-info-dec">
-                    <p>Address goes here, </p>
-                    <p>street, Crossroad 123.</p>
+                    <p>Địa chỉ tại: </p>
+                    <p>Đường 123, tp HCM.</p>
                   </div>
                 </div>
                 <div className="contact-social text-center">
-                  <h3>Follow Us</h3>
+                  <h3>Theo dõi chúng tôi</h3>
                   <ul>
                     <li>
                       <a href="//facebook.com">
@@ -92,23 +91,27 @@ const Contact = () => {
             <div className="col-lg-8 col-md-7">
               <div className="contact-form">
                 <div className="contact-title mb-30">
-                  <h2>Get In Touch</h2>
+                  <h2>Thông tin liên lạc</h2>
                 </div>
                 <form className="contact-form-style">
                   <div className="row">
                     <div className="col-lg-6">
-                      <input name="name" placeholder="Name*" type="text" />
+                      <input name="name" placeholder="Họ và Tên*" type="text" />
                     </div>
                     <div className="col-lg-6">
                       <input name="email" placeholder="Email*" type="email" />
                     </div>
                     <div className="col-lg-12">
-                      <input name="subject" placeholder="Subject*" type="text" />
+                      <input name="subject" placeholder="Chủ đề*" type="text" />
                     </div>
                     <div className="col-lg-12">
-                      <textarea name="message" placeholder="Your Message*" defaultValue={""} />
+                      <textarea
+                        name="message"
+                        placeholder="Lời nhắn của bạn*"
+                        defaultValue={""}
+                      />
                       <button className="submit" type="submit">
-                        SEND
+                        GỬI
                       </button>
                     </div>
                   </div>
@@ -120,10 +123,6 @@ const Contact = () => {
       </div>
     </Fragment>
   );
-};
-
-Contact.propTypes = {
-  location: PropTypes.object,
 };
 
 export default Contact;
