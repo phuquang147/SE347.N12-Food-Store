@@ -1,5 +1,4 @@
-import PropTypes from "prop-types";
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import MetaTags from "react-meta-tags";
 
 const Contact = () => {
@@ -64,7 +63,11 @@ const Contact = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="//pinterest.com" target="_blank" rel="noreferrer">
+                      <a
+                        href="//pinterest.com"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <i className="fa fa-pinterest-p" />
                       </a>
                     </li>
@@ -101,10 +104,18 @@ const Contact = () => {
                       <input name="email" placeholder="Email*" type="email" />
                     </div>
                     <div className="col-lg-12">
-                      <input name="subject" placeholder="Tiêu đề*" type="text" />
+                      <input
+                        name="subject"
+                        placeholder="Tiêu đề*"
+                        type="text"
+                      />
                     </div>
                     <div className="col-lg-12">
-                      <textarea name="message" placeholder="Lời nhắn của bạn*" defaultValue={""} />
+                      <textarea
+                        name="message"
+                        placeholder="Lời nhắn của bạn*"
+                        defaultValue={""}
+                      />
                       <button className="submit" type="submit">
                         Gửi
                       </button>
