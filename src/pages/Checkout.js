@@ -24,13 +24,13 @@ const Checkout = ({ location, cartItems }) => {
                   <div className="row">
                     <div className="col-lg-6 col-md-6">
                       <div className="billing-info mb-20">
-                        <label>Họ và tên lót</label>
+                        <label>Họ và tên</label>
                         <input type="text" required />
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-6">
                       <div className="billing-info mb-20">
-                        <label>Tên</label>
+                        <label>Địa chỉ</label>
                         <input type="text" required />
                       </div>
                     </div>

@@ -84,7 +84,20 @@ const IconGroup = ({ cartData, wishlistData, deleteFromCart }) => {
             <li>
               <Link to="/register">Đăng ký</Link>
             </li>
-            {isLogin && <li onClick={avatarGg ? signOut : facebookLogout}>Đăng xuất</li>}
+            {isLogin && (
+              <li
+                onClick={
+                  avatarGg
+                    ? () => {
+                        signOut();
+                        setIsLogin(false);
+                      }
+                    : facebookLogout
+                }
+              >
+                Đăng xuất
+              </li>
+            )}
             {isLogin && (
               <li>
                 <Link to="/my-account">Tài khoản</Link>
