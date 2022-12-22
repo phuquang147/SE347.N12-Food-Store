@@ -1,12 +1,8 @@
 @import "~bootstrap/scss/bootstrap.scss";
-@import "swiper/swiper.min.css";
-@import "swiper/css";
-@import "swiper/css/navigation";
-@import "swiper/css/autoplay";
-// @import "swiper/css/pagination";
 @import "~animate.css/animate.min.css";
 @import "~lightgallery.js/dist/css/lightgallery.css";
 @import "../css/icons.min.css";
+@import "~swiper/css/swiper.css";
 
 @import "variables";
 @import "common";
@@ -22,3 +18,6 @@
 @import "404";
 @import "contact";
 @import "checkout";
+@import "shop";
+@import "sidebar";
+@import "product-details";

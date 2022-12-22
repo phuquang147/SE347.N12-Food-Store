@@ -34,7 +34,7 @@ export const decreaseQuantity = (item, addToast) => {
 export const deleteFromCart = (item, addToast) => {
   return (dispatch) => {
     if (addToast) {
-      addToast("Đã xóa khỏi giỏi hàng", { appearance: "error", autoDismiss: true });
+      addToast("Đã xóa khỏi giỏ hàng", { appearance: "error", autoDismiss: true });
     }
     dispatch({ type: DELETE_FROM_CART, payload: item });
   };
@@ -57,8 +57,7 @@ export const cartItemStock = (item, color, size) => {
   if (item.stock) {
     return item.stock;
   } else {
-    return item.variation
-      .filter((single) => single.color === color)[0]
-      .size.filter((single) => single.name === size)[0].stock;
+    return item.variation.filter((single) => single.color === color)[0].size.filter((single) => single.name === size)[0]
+      .stock;
   }
 };

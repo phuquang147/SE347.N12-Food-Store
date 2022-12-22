@@ -30,12 +30,8 @@ const HeaderOne = () => {
         </div>
       </div>
 
-      <div
-        className={`header-padding-2 sticky-bar header-res-padding clearfix ${
-          scroll > headerTop ? "stick" : ""
-        }`}
-      >
-        <div className="container-fluid">
+      <div className={`header-padding-2 sticky-bar header-res-padding clearfix ${scroll > headerTop ? "stick" : ""}`}>
+        <div className="container">
           <div className="row">
             <div className="col-xl-2 col-lg-2 col-md-6 col-4">
               <Logo imageUrl="/assets/img/logo/logo.png" />

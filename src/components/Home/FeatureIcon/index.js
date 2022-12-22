@@ -1,4 +1,4 @@
-import featureIconData from "~/data/feature-icon";
+import featureIconData from "~/data/feature-icon.json";
 import FeatureIconSingle from "./FeatureIconSingle.js";
 
 const FeatureIcon = () => {

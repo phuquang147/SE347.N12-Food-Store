@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useGoogleLogout } from "react-google-login";
+import { connect } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { useToasts } from "react-toast-notifications";
+import { deleteFromCart } from "~/redux/actions/cartActions";
 import MenuCart from "./sub-components/MenuCart";
-// import { deleteFromCart } from "../../redux/actions/cartActions";
 
 const clientId = "28621200637-b33nlbjs4h5rpl5fp3d8tkdc3utp87fe.apps.googleusercontent.com";
 
@@ -37,7 +38,7 @@ const IconGroup = ({ cartData, wishlistData, deleteFromCart }) => {
 
     // dispatch(authActions.logout());
     // dispatch(cartActions.clearCart());
-    addToast("Logout successfully", { appearance: "success", autoDismiss: true, autoDismissTimeout: 3000 });
+    addToast("Đăng xuất thành công", { appearance: "success", autoDismiss: true, autoDismissTimeout: 3000 });
     navigate("/", { replace: true });
   };
 
@@ -67,10 +68,10 @@ const IconGroup = ({ cartData, wishlistData, deleteFromCart }) => {
 
   return (
     <div className="header-right-wrap">
-      <div className="same-style account-setting d-none d-lg-block">
+      <div className="same-style account-setting d-lg-block">
         <button onClick={(e) => handleClick(e)}>
           {avatarGg || avatarFb ? (
-            <img className="user-avatar" src={avatarGg || avatarFb} alt="Avatar Google" referrerPolicy="no-referrer" />
+            <img className="user-avatar" src={avatarGg || avatarFb} alt="Avatar User" referrerPolicy="no-referrer" />
           ) : (
             <i className="pe-7s-user-female" />
           )}
@@ -124,19 +125,19 @@ const IconGroup = ({ cartData, wishlistData, deleteFromCart }) => {
   );
 };
 
-// const mapStateToProps = (state) => {
-//   return {
-//     cartData: state.cartData,
-//     wishlistData: state.wishlistData,
-//   };
-// };
+const mapStateToProps = (state) => {
+  return {
+    cartData: state.cartData,
+    wishlistData: state.wishlistData,
+  };
+};
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     deleteFromCart: (item, addToast) => {
-//       dispatch(deleteFromCart(item, addToast));
-//     },
-//   };
-// };
+const mapDispatchToProps = (dispatch) => {
+  return {
+    deleteFromCart: (item, addToast) => {
+      dispatch(deleteFromCart(item, addToast));
+    },
+  };
+};
 
-export default IconGroup;
+export default connect(mapStateToProps, mapDispatchToProps)(IconGroup);

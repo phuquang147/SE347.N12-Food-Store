@@ -4,13 +4,11 @@ import Banner from "~/components/Home/Banner";
 import FeatureIcon from "~/components/Home/FeatureIcon";
 import HeroSlider from "~/components/Home/HeroSlider";
 
-// import "swiper/css/swiper.css";
-
 const Home = () => {
   return (
     <Fragment>
       <MetaTags>
-        <title>Trang Chủ</title>
+        <title>Trang chủ</title>
       </MetaTags>
       <HeroSlider />
       <FeatureIcon />

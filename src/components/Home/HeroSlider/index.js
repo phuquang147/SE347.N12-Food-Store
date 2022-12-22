@@ -1,12 +1,6 @@
-import React from "react";
 import Swiper from "react-id-swiper";
+import sliderData from "~/data/hero-slider.json";
 import HeroSliderSingle from "./HeroSliderSingle";
-import sliderData from "~/data/hero-slider";
-
-import "swiper/css/autoplay";
-// import "swiper/css/bundle";
-
-// import "swiper/swiper.scss";
 
 const HeroSlider = () => {
   const params = {
@@ -14,7 +8,7 @@ const HeroSlider = () => {
     loop: true,
     speed: 1000,
     autoplay: {
-      delay: 1000,
+      delay: 5000,
       disableOnInteraction: false,
     },
     watchSlidesVisibility: true,

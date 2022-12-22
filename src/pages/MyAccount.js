@@ -9,8 +9,7 @@ const MyAccount = ({ location }) => {
   return (
     <Fragment>
       <MetaTags>
-        <title>Flone | My Account</title>
-        <meta name="description" content="Compare page of flone react minimalist eCommerce template." />
+        <title>Tài khoản</title>
       </MetaTags>
 
       <div className="pb-80 pt-100">
@@ -22,36 +21,36 @@ const MyAccount = ({ location }) => {
                   <Card className="single-my-account mb-20">
                     <Card.Header className="panel-heading">
                       <Accordion.Item eventKey="0">
-                        <Accordion.Header className="panel-title">1. Edit your account information</Accordion.Header>
+                        <Accordion.Header className="panel-title">1. Chỉnh sửa thông tin tài khoản</Accordion.Header>
                         <Accordion.Body>
                           <Card.Body>
                             <div className="myaccount-info-wrapper">
                               <div className="account-info-wrapper">
-                                <h4>My Account Information</h4>
-                                <h5>Your Personal Details</h5>
+                                <h4>Thông tin tài khoản</h4>
+                                <h5>Chi tiết thông tin cá nhân</h5>
                               </div>
                               <div className="row">
                                 <div className="col-lg-6 col-md-6">
                                   <div className="billing-info">
-                                    <label>First Name</label>
+                                    <label>Họ</label>
                                     <input type="text" />
                                   </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6">
                                   <div className="billing-info">
-                                    <label>Last Name</label>
+                                    <label>Tên</label>
                                     <input type="text" />
                                   </div>
                                 </div>
                                 <div className="col-lg-12 col-md-12">
                                   <div className="billing-info">
-                                    <label>Email Address</label>
+                                    <label>Email</label>
                                     <input type="email" />
                                   </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6">
                                   <div className="billing-info">
-                                    <label>Telephone</label>
+                                    <label>Số điện thoại</label>
                                     <input type="text" />
                                   </div>
                                 </div>
@@ -64,7 +63,7 @@ const MyAccount = ({ location }) => {
                               </div>
                               <div className="billing-back-btn">
                                 <div className="billing-btn">
-                                  <button type="submit">Continue</button>
+                                  <button type="submit">Tiếp tục</button>
                                 </div>
                               </div>
                             </div>
@@ -76,31 +75,31 @@ const MyAccount = ({ location }) => {
                   <Card className="single-my-account mb-20">
                     <Card.Header className="panel-heading">
                       <Accordion.Item eventKey="1">
-                        <Accordion.Header className="panel-title">2. Change your password</Accordion.Header>
+                        <Accordion.Header className="panel-title">2. Thay đổi mật khẩu</Accordion.Header>
                         <Accordion.Body>
                           <Card.Body>
                             <div className="myaccount-info-wrapper">
                               <div className="account-info-wrapper">
-                                <h4>Change Password</h4>
-                                <h5>Your Password</h5>
+                                <h4>Thay đổi mật khẩu</h4>
+                                <h5>Mật khẩu của bạn</h5>
                               </div>
                               <div className="row">
                                 <div className="col-lg-12 col-md-12">
                                   <div className="billing-info">
-                                    <label>Password</label>
+                                    <label>Mật khẩu</label>
                                     <input type="password" />
                                   </div>
                                 </div>
                                 <div className="col-lg-12 col-md-12">
                                   <div className="billing-info">
-                                    <label>Password Confirm</label>
+                                    <label>Xác nhận mật khẩu</label>
                                     <input type="password" />
                                   </div>
                                 </div>
                               </div>
                               <div className="billing-back-btn">
                                 <div className="billing-btn">
-                                  <button type="submit">Continue</button>
+                                  <button type="submit">Tiếp tục</button>
                                 </div>
                               </div>
                             </div>
@@ -112,12 +111,12 @@ const MyAccount = ({ location }) => {
                   <Card className="single-my-account mb-20">
                     <Card.Header className="panel-heading">
                       <Accordion.Item eventKey="2">
-                        <Accordion.Header className="panel-title">3. Modify your address book entries</Accordion.Header>
+                        <Accordion.Header className="panel-title">3. Chỉnh sửa danh sách địa chỉ</Accordion.Header>
                         <Accordion.Body>
                           <Card.Body>
                             <div className="myaccount-info-wrapper">
                               <div className="account-info-wrapper">
-                                <h4>Address Book Entries</h4>
+                                <h4>Danh sách địa chỉ</h4>
                               </div>
                               <div className="entries-wrapper">
                                 <div className="row">
@@ -132,15 +131,15 @@ const MyAccount = ({ location }) => {
                                   </div>
                                   <div className="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
                                     <div className="entries-edit-delete text-center">
-                                      <button className="edit">Edit</button>
-                                      <button>Delete</button>
+                                      <button className="edit">Chỉnh sửa</button>
+                                      <button>Xóa</button>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                               <div className="billing-back-btn">
                                 <div className="billing-btn">
-                                  <button type="submit">Continue</button>
+                                  <button type="submit">Tiếp tục</button>
                                 </div>
                               </div>
                             </div>

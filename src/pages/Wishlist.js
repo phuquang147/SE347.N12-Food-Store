@@ -6,6 +6,7 @@ import MetaTags from "react-meta-tags";
 import { connect } from "react-redux";
 import { addToWishlist, deleteFromWishlist, deleteAllFromWishlist } from "../redux/actions/wishlistActions";
 import { addToCart } from "../redux/actions/cartActions";
+import numberWithCommas from "~/utils/number-with-commas";
 
 const Wishlist = ({ location, cartItems, addToCart, wishlistItems, deleteFromWishlist, deleteAllFromWishlist }) => {
   const { addToast } = useToasts();
@@ -13,7 +14,7 @@ const Wishlist = ({ location, cartItems, addToCart, wishlistItems, deleteFromWis
   return (
     <Fragment>
       <MetaTags>
-        <title>Wishlist</title>
+        <title>Danh sách yêu thích</title>
       </MetaTags>
       <div className="cart-main-area pt-90 pb-100">
         <div className="container">
@@ -30,7 +31,7 @@ const Wishlist = ({ location, cartItems, addToCart, wishlistItems, deleteFromWis
                           <th>Tên sản phẩm</th>
                           <th>Đơn giá</th>
                           <th>Thêm vào giỏ hàng</th>
-                          <th>Tùy chọn</th>
+                          <th>Xóa</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -55,14 +56,14 @@ const Wishlist = ({ location, cartItems, addToCart, wishlistItems, deleteFromWis
                               </td>
 
                               <td className="product-price-cart">
-                                <span className="amount">{`${wishlistItem.price}`}</span>
+                                <span className="amount">{numberWithCommas(wishlistItem.price)} VNĐ</span>
                               </td>
 
                               <td className="product-wishlist-cart">
                                 {wishlistItem.affiliateLink ? (
                                   <a href={wishlistItem.affiliateLink} rel="noopener noreferrer" target="_blank">
                                     {" "}
-                                    Buy now{" "}
+                                    Mua ngay{" "}
                                   </a>
                                 ) : wishlistItem.variation && wishlistItem.variation.length >= 1 ? (
                                   <Link to={`${process.env.PUBLIC_URL}/product/${wishlistItem.id}`}>Select option</Link>
@@ -71,9 +72,13 @@ const Wishlist = ({ location, cartItems, addToCart, wishlistItems, deleteFromWis
                                     onClick={() => addToCart(wishlistItem, addToast)}
                                     className={cartItem !== undefined && cartItem.quantity > 0 ? "active" : ""}
                                     disabled={cartItem !== undefined && cartItem.quantity > 0}
-                                    title={wishlistItem !== undefined ? "Đã thêm vào giỏ hàng" : "Thêm vào giỏ"}
+                                    title={
+                                      wishlistItem !== undefined && cartItem !== undefined && cartItem.quantity > 0
+                                        ? "Đã thêm vào giỏ hàng"
+                                        : "Thêm vào giỏ hàng"
+                                    }
                                   >
-                                    {cartItem !== undefined && cartItem.quantity > 0 ? "Đã thêm" : "Thêm vào giỏ"}
+                                    {cartItem !== undefined && cartItem.quantity > 0 ? "Đã thêm" : "Thêm"}
                                   </button>
                                 ) : (
                                   <button disabled className="active">

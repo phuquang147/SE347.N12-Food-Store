@@ -21,7 +21,7 @@ const Cart = ({ cartItems, decreaseQuantity, addToCart, deleteFromCart, deleteAl
   return (
     <Fragment>
       <MetaTags>
-        <title>Cart</title>
+        <title>Giỏ hàng</title>
       </MetaTags>
       <div className="cart-main-area pt-90 pb-100">
         <div className="container">
@@ -136,7 +136,7 @@ const Cart = ({ cartItems, decreaseQuantity, addToCart, deleteFromCart, deleteAl
                 <div className="col-lg-4 col-md-12">
                   <div className="grand-totall">
                     <h4 className="grand-totall-title ">
-                      Tổng tiền <span>{`${numberWithCommas(cartTotalPrice.toFixed(2))} VNĐ`}</span>
+                      Tổng tiền <span>{`${numberWithCommas(cartTotalPrice)} VNĐ`}</span>
                       {/* <span>100000 VNĐ</span> */}
                     </h4>
                     <Link to={process.env.PUBLIC_URL + "/checkout"}>Thanh toán</Link>
