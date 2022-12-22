@@ -12,7 +12,7 @@ const Banner = () => {
                   <img src="/assets/img/banner/banner1.png" alt="" />
                 </Link>
                 <div className="banner-content banner-position-1">
-                  <h3>Táo Xanh</h3>
+                  <h3>Lê Nam Phi</h3>
                   <p>
                     Giá từ <span>100,000 VNĐ</span>
                   </p>
@@ -28,7 +28,7 @@ const Banner = () => {
                   <img src="/assets/img/banner/banner2.png" alt="" />
                 </Link>
                 <div className="banner-content banner-position-1">
-                  <h3>Cam Chín</h3>
+                  <h3>Cam Sành</h3>
                   <p>
                     Giá từ <span>50,000 VNĐ</span>
                   </p>
@@ -60,7 +60,7 @@ const Banner = () => {
                   <img src="/assets/img/banner/banner4.png" alt="" />
                 </Link>
                 <div className="banner-content banner-position-2">
-                  <h3>Bắp Chín</h3>
+                  <h3>Bắp Mỹ</h3>
                   <p>
                     Giá từ <span>60,000 VNĐ</span>
                   </p>
@@ -76,7 +76,7 @@ const Banner = () => {
                   <img src="/assets/img/banner/banner5.png" alt="" />
                 </Link>
                 <div className="banner-content banner-position-2">
-                  <h3>Ổi xanh</h3>
+                  <h3>Ổi Ruby</h3>
                   <p>
                     Giá từ <span>30,000 VNĐ</span>
                   </p>

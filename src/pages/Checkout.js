@@ -23,13 +23,13 @@ const Checkout = ({ location, cartItems }) => {
                   <div className="row">
                     <div className="col-lg-6 col-md-6">
                       <div className="billing-info mb-20">
-                        <label>Họ và tên lót</label>
+                        <label>Họ và tên</label>
                         <input type="text" required />
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-6">
                       <div className="billing-info mb-20">
-                        <label>Tên</label>
+                        <label>Địa chỉ</label>
                         <input type="text" required />
                       </div>
                     </div>
@@ -52,11 +52,7 @@ const Checkout = ({ location, cartItems }) => {
                     <h4>Thông tin thêm</h4>
                     <div className="additional-info">
                       <label>Ghi chú</label>
-                      <textarea
-                        placeholder="Ghi chú"
-                        name="message"
-                        defaultValue={""}
-                      />
+                      <textarea placeholder="Ghi chú" name="message" defaultValue={""} />
                     </div>
                   </div>
                 </div>
@@ -75,8 +71,7 @@ const Checkout = ({ location, cartItems }) => {
                       <div className="your-order-middle">
                         <ul>
                           {cartItems.map((cartItem, key) => {
-                            cartTotalPrice +=
-                              cartItem.price * cartItem.quantity;
+                            cartTotalPrice += cartItem.price * cartItem.quantity;
 
                             return (
                               <li key={key}>
@@ -84,10 +79,7 @@ const Checkout = ({ location, cartItems }) => {
                                   {cartItem.name} X {cartItem.quantity}
                                 </span>{" "}
                                 <span className="order-price">
-                                  {numberWithCommas(
-                                    cartItem.price * cartItem.quantity
-                                  )}{" "}
-                                  VNĐ
+                                  {numberWithCommas(cartItem.price * cartItem.quantity)} VNĐ
                                 </span>
                               </li>
                             );

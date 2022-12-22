@@ -1,3 +1,5 @@
+import { setActiveSort } from "~/helpers/product";
+
 const ShopCategories = ({ categories, getSortParams }) => {
   return (
     <div className="sidebar-widget mt-50">
@@ -10,6 +12,7 @@ const ShopCategories = ({ categories, getSortParams }) => {
                 <li key={key}>
                   <button
                     onClick={(e) => {
+                      setActiveSort(e);
                       getSortParams("category", category);
                     }}
                   >
