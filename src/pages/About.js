@@ -1,11 +1,10 @@
-import PropTypes from "prop-types";
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import MetaTags from "react-meta-tags";
-import SectionTitleWithText from "../components/section-title/SectionTitleWithText";
+import "~/assets/scss/_about.scss";
+import SectionTitleWithText from "~/components/section-title/SectionTitleWithText";
 import TextGrid from "../wrappers/TextGrid";
-import "../assets/scss/_about.scss";
 
-const About = ({ location }) => {
+const About = () => {
   return (
     <Fragment>
       <MetaTags>
@@ -14,14 +13,9 @@ const About = ({ location }) => {
 
       <SectionTitleWithText spaceTopClass="pt-100" spaceBottomClass="pb-95" />
 
-      {/* text grid */}
       <TextGrid spaceBottomClass="pb-70" />
     </Fragment>
   );
-};
-
-About.propTypes = {
-  location: PropTypes.object,
 };
 
 export default About;

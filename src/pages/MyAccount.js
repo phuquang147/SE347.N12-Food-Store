@@ -1,11 +1,10 @@
-import PropTypes from "prop-types";
-import React, { Fragment } from "react";
-import MetaTags from "react-meta-tags";
-import Card from "react-bootstrap/Card";
+import { Fragment } from "react";
 import Accordion from "react-bootstrap/Accordion";
+import Card from "react-bootstrap/Card";
+import MetaTags from "react-meta-tags";
 import "../assets/scss/_my-account.scss";
 
-const MyAccount = ({ location }) => {
+const MyAccount = () => {
   return (
     <Fragment>
       <MetaTags>
@@ -21,7 +20,9 @@ const MyAccount = ({ location }) => {
                   <Card className="single-my-account mb-20">
                     <Card.Header className="panel-heading">
                       <Accordion.Item eventKey="0">
-                        <Accordion.Header className="panel-title">1. Chỉnh sửa thông tin tài khoản</Accordion.Header>
+                        <Accordion.Header className="panel-title">
+                          1. Chỉnh sửa thông tin tài khoản
+                        </Accordion.Header>
                         <Accordion.Body>
                           <Card.Body>
                             <div className="myaccount-info-wrapper">
@@ -75,7 +76,9 @@ const MyAccount = ({ location }) => {
                   <Card className="single-my-account mb-20">
                     <Card.Header className="panel-heading">
                       <Accordion.Item eventKey="1">
-                        <Accordion.Header className="panel-title">2. Thay đổi mật khẩu</Accordion.Header>
+                        <Accordion.Header className="panel-title">
+                          2. Thay đổi mật khẩu
+                        </Accordion.Header>
                         <Accordion.Body>
                           <Card.Body>
                             <div className="myaccount-info-wrapper">
@@ -111,7 +114,9 @@ const MyAccount = ({ location }) => {
                   <Card className="single-my-account mb-20">
                     <Card.Header className="panel-heading">
                       <Accordion.Item eventKey="2">
-                        <Accordion.Header className="panel-title">3. Chỉnh sửa danh sách địa chỉ</Accordion.Header>
+                        <Accordion.Header className="panel-title">
+                          3. Chỉnh sửa danh sách địa chỉ
+                        </Accordion.Header>
                         <Accordion.Body>
                           <Card.Body>
                             <div className="myaccount-info-wrapper">
@@ -131,7 +136,9 @@ const MyAccount = ({ location }) => {
                                   </div>
                                   <div className="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
                                     <div className="entries-edit-delete text-center">
-                                      <button className="edit">Chỉnh sửa</button>
+                                      <button className="edit">
+                                        Chỉnh sửa
+                                      </button>
                                       <button>Xóa</button>
                                     </div>
                                   </div>
@@ -236,10 +243,6 @@ const MyAccount = ({ location }) => {
       </div>
     </Fragment>
   );
-};
-
-MyAccount.propTypes = {
-  location: PropTypes.object,
 };
 
 export default MyAccount;

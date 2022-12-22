@@ -1,8 +1,7 @@
-import PropTypes from "prop-types";
-import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
+import { Fragment } from "react";
 import MetaTags from "react-meta-tags";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import numberWithCommas from "~/utils/number-with-commas";
 
 const Checkout = ({ location, cartItems }) => {
@@ -53,7 +52,11 @@ const Checkout = ({ location, cartItems }) => {
                     <h4>Thông tin thêm</h4>
                     <div className="additional-info">
                       <label>Ghi chú</label>
-                      <textarea placeholder="Ghi chú" name="message" defaultValue={""} />
+                      <textarea
+                        placeholder="Ghi chú"
+                        name="message"
+                        defaultValue={""}
+                      />
                     </div>
                   </div>
                 </div>
@@ -72,7 +75,8 @@ const Checkout = ({ location, cartItems }) => {
                       <div className="your-order-middle">
                         <ul>
                           {cartItems.map((cartItem, key) => {
-                            cartTotalPrice += cartItem.price * cartItem.quantity;
+                            cartTotalPrice +=
+                              cartItem.price * cartItem.quantity;
 
                             return (
                               <li key={key}>
@@ -80,7 +84,10 @@ const Checkout = ({ location, cartItems }) => {
                                   {cartItem.name} X {cartItem.quantity}
                                 </span>{" "}
                                 <span className="order-price">
-                                  {numberWithCommas(cartItem.price * cartItem.quantity)} VNĐ
+                                  {numberWithCommas(
+                                    cartItem.price * cartItem.quantity
+                                  )}{" "}
+                                  VNĐ
                                 </span>
                               </li>
                             );
@@ -122,11 +129,6 @@ const Checkout = ({ location, cartItems }) => {
   );
 };
 
-Checkout.propTypes = {
-  cartItems: PropTypes.array,
-  location: PropTypes.object,
-};
-
 const mapStateToProps = (state) => {
   return {
     cartItems: state.cartData,
@@ -134,4 +136,3 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(Checkout);
-// export default Checkout;

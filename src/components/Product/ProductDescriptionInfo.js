@@ -1,12 +1,19 @@
 import { useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { getProductCartQuantity } from "~/helpers/product-temp";
+import { getProductCartQuantity } from "~/helpers/product";
 import { addToCart } from "~/redux/actions/cartActions";
 import { addToWishlist } from "~/redux/actions/wishlistActions";
 import numberWithCommas from "~/utils/number-with-commas";
 
-const ProductDescriptionInfo = ({ product, cartItems, wishlistItem, addToast, addToCart, addToWishlist }) => {
+const ProductDescriptionInfo = ({
+  product,
+  cartItems,
+  wishlistItem,
+  addToast,
+  addToCart,
+  addToWishlist,
+}) => {
   const [quantityCount, setQuantityCount] = useState(1);
   const productCartQty = getProductCartQuantity(cartItems, product);
 
@@ -21,13 +28,27 @@ const ProductDescriptionInfo = ({ product, cartItems, wishlistItem, addToast, ad
       </div>
       <div className="pro-details-quality">
         <div className="cart-plus-minus">
-          <button onClick={() => setQuantityCount(quantityCount > 1 ? quantityCount - 1 : 1)} className="dec qtybutton">
-            -
-          </button>
-          <input className="cart-plus-minus-box" type="text" value={quantityCount} readOnly />
           <button
             onClick={() =>
-              setQuantityCount(quantityCount < product.stock - productCartQty ? quantityCount + 1 : quantityCount)
+              setQuantityCount(quantityCount > 1 ? quantityCount - 1 : 1)
+            }
+            className="dec qtybutton"
+          >
+            -
+          </button>
+          <input
+            className="cart-plus-minus-box"
+            type="text"
+            value={quantityCount}
+            readOnly
+          />
+          <button
+            onClick={() =>
+              setQuantityCount(
+                quantityCount < product.stock - productCartQty
+                  ? quantityCount + 1
+                  : quantityCount
+              )
             }
             className="inc qtybutton"
             disabled={product.stock <= 0}
@@ -51,7 +72,11 @@ const ProductDescriptionInfo = ({ product, cartItems, wishlistItem, addToast, ad
           <button
             className={wishlistItem !== undefined ? "active" : ""}
             disabled={wishlistItem !== undefined ? true : false}
-            title={wishlistItem !== undefined ? "Đã thêm vào yêu thích" : "Thêm vào yêu thích"}
+            title={
+              wishlistItem !== undefined
+                ? "Đã thêm vào yêu thích"
+                : "Thêm vào yêu thích"
+            }
             onClick={() => addToWishlist(product, addToast)}
           >
             {wishlistItem !== undefined ? (

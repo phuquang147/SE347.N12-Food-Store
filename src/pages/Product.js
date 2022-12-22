@@ -3,15 +3,17 @@ import MetaTags from "react-meta-tags";
 import { connect } from "react-redux";
 import { useParams } from "react-router";
 import { useToasts } from "react-toast-notifications";
-import ProductDescriptionInfo from "~/components/product/ProductDescriptionInfo";
-import ProductImageGallery from "~/components/product/ProductImageGallery";
+import ProductDescriptionInfo from "~/components/Product/ProductDescriptionInfo";
+import ProductImageGallery from "~/components/Product/ProductImageGallery";
 
 const Product = ({ products, cartItems, wishlistItems }) => {
   const { id } = useParams();
   const currentProduct = products.filter((single) => single.id === id)[0];
   const { addToast } = useToasts();
 
-  const wishlistItem = wishlistItems.filter((wishlistItem) => wishlistItem.id === id)[0];
+  const wishlistItem = wishlistItems.filter(
+    (wishlistItem) => wishlistItem.id === id
+  )[0];
 
   return (
     <Fragment>

@@ -1,16 +1,20 @@
-import PropTypes from "prop-types";
-import React, { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Paginator from "react-hooks-paginator";
 import MetaTags from "react-meta-tags";
 import { connect } from "react-redux";
-import { getSortedProducts } from "../helpers/product";
-import ShopProducts from "../components/Shop/ShopProducts/index";
-import ShopSidebar from "../components/Shop/ShopSidebar/index";
-import ShopTopbar from "../components/Shop/ShopTopbar/index";
+import ShopProducts from "~/components/Shop/ShopProducts/index";
+import ShopSidebar from "~/components/Shop/ShopSidebar/index";
+import ShopTopAction from "~/components/Shop/ShopTopAction";
+import { getSortedProducts } from "~/helpers/product";
+
+const layouts = {
+  twoColumns: "col-xl-6 col-sm-6",
+  threeColumns: "col-xl-4 col-sm-6",
+  fourColumns: "col-xl-3 col-sm-6",
+};
 
 const Shop = ({ products }) => {
-  console.log("Shop accessed");
-  const [layout, setLayout] = useState("grid three-column");
+  const [layout, setLayout] = useState(layouts.threeColumns);
   const [sortType, setSortType] = useState("");
   const [sortValue, setSortValue] = useState("");
   const [filterSortType, setFilterSortType] = useState("");
@@ -21,10 +25,6 @@ const Shop = ({ products }) => {
   const [sortedProducts, setSortedProducts] = useState([]);
 
   const pageLimit = 15;
-
-  const getLayout = (layout) => {
-    setLayout(layout);
-  };
 
   const getSortParams = (sortType, sortValue) => {
     setSortType(sortType);
@@ -38,7 +38,11 @@ const Shop = ({ products }) => {
 
   useEffect(() => {
     let sortedProducts = getSortedProducts(products, sortType, sortValue);
-    const filterSortedProducts = getSortedProducts(sortedProducts, filterSortType, filterSortValue);
+    const filterSortedProducts = getSortedProducts(
+      sortedProducts,
+      filterSortType,
+      filterSortValue
+    );
     sortedProducts = filterSortedProducts;
     setSortedProducts(sortedProducts);
     setCurrentData(sortedProducts.slice(offset, offset + pageLimit));
@@ -54,22 +58,19 @@ const Shop = ({ products }) => {
         <div className="container">
           <div className="row">
             <div className="col-lg-3 order-2 order-lg-1">
-              {/* shop sidebar */}
-              <ShopSidebar products={products} getSortParams={getSortParams} sideSpaceClass="mr-30" />
+              <ShopSidebar products={products} getSortParams={getSortParams} />
             </div>
             <div className="col-lg-9 order-1 order-lg-2">
-              {/* shop topbar default */}
-              <ShopTopbar
-                getLayout={getLayout}
+              <ShopTopAction
+                layouts={layouts}
+                setLayout={setLayout}
                 getFilterSortParams={getFilterSortParams}
                 productCount={products.length}
                 sortedProductCount={currentData.length}
               />
 
-              {/* shop page content default */}
               <ShopProducts layout={layout} products={currentData} />
 
-              {/* shop product pagination */}
               <div className="pro-pagination-style text-center mt-30">
                 <Paginator
                   totalRecords={sortedProducts.length}
@@ -98,4 +99,3 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(Shop);
-// export default Shop;
