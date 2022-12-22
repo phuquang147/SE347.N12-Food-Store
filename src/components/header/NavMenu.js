@@ -9,9 +9,9 @@ const NavMenu = () => {
             <Link to="/">Trang chủ</Link>
           </li>
           <li>
-            <Link to="/shop">Shop</Link>
+            <Link to="/shop">Sản phẩm</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/">
               Các Trang
               <i className="fa fa-angle-down" />
@@ -31,7 +31,7 @@ const NavMenu = () => {
                 <Link to="/not-found">404</Link>
               </li>
             </ul>
-          </li>
+          </li> */}
           <li>
             <Link to="/contact">Liên hệ</Link>
           </li>
