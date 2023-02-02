@@ -6,24 +6,26 @@ import ScrollToTop from "./helpers/scroll-top";
 
 function App() {
   return (
-    <ToastProvider placement="bottom-right">
-      <BrowserRouter>
-        <ScrollToTop>
-          <Suspense
-            fallback={
-              <div className="preloader-wrapper">
-                <div className="preloader">
-                  <span></span>
-                  <span></span>
+    <>
+      <ToastProvider placement="bottom-right">
+        <BrowserRouter>
+          <ScrollToTop>
+            <Suspense
+              fallback={
+                <div className="preloader-wrapper">
+                  <div className="preloader">
+                    <span></span>
+                    <span></span>
+                  </div>
                 </div>
-              </div>
-            }
-          >
-            <Routes />
-          </Suspense>
-        </ScrollToTop>
-      </BrowserRouter>
-    </ToastProvider>
+              }
+            >
+              <Routes />
+            </Suspense>
+          </ScrollToTop>
+        </BrowserRouter>
+      </ToastProvider>
+    </>
   );
 }
 

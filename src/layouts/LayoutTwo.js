@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Outlet } from "react-router";
-import FooterTwo from "./footer/FooterTwo";
+import FooterTwo from "./footer/FooterChristmas";
 import HeaderTwo from "./header/HeaderTwo";
 
 const LayoutTwo = () => {

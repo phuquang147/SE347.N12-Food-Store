@@ -9,7 +9,6 @@ import App from "./App";
 import products from "./data/products.json";
 import { fetchProducts } from "./redux/actions/productActions";
 import rootReducer from "./redux/reducers/rootReducer";
-import "boxicons";
 
 const store = createStore(rootReducer, load(), applyMiddleware(thunk, save()));
 
