@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Tết Nguyên Đán 2023",
+    "subtitle": "Khuyến mãi lên đến 50%",
+    "image": "/assets/img/lunar-new-year/slider1.jpg",
+    "url": "/shop"
+  },
+  {
+    "id": 2,
+    "title": "Tết Nguyên Đán 2023",
+    "subtitle": "Khuyến mãi lên đến 50%",
+    "image": "/assets/img/lunar-new-year/slider2.jpg",
+    "url": "/shop"
+  }
+]

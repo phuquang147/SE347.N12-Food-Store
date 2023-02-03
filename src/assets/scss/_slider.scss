@@ -178,7 +178,17 @@
           left: 45px;
         }
       }
+
+      &.new-year {
+        margin: 0;
+        &::before {
+          display: none;
+          text-align: center;
+          left: 0;
+        }
+      }
     }
+
     h1 {
       font-size: 71px;
       @media #{$xl-layout} {
@@ -194,11 +204,17 @@
         font-size: 30px;
         margin: 6px 0 20px;
       }
+
+      &.new-year {
+        color: #f06242;
+        text-align: center;
+        text-transform: uppercase;
+      }
     }
+
     .slider-btn {
       a {
         font-size: 16px;
-
         color: #fff;
         border: 1px solid #6eab49;
         background-color: #6eab49;
@@ -207,6 +223,18 @@
           border: 1px solid $theme-color;
         }
       }
+      &.new-year a {
+        background-color: #f06242;
+        border: 1px solid #f06242;
+        margin: 0 auto;
+      }
+    }
+
+    &.new-year {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
