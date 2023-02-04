@@ -1,4 +1,6 @@
-import LayoutOne from "~/layouts/LayoutOne";
+import LayoutBasic from "~/layouts/LayoutBasic";
+// import LayoutChristmas from "~/layouts/LayoutChristmas";
+// import LayoutNewYear from "~/layouts/LayoutNewYear";
 import About from "~/pages/About";
 import Home from "~/pages/Home";
 import MyAccount from "~/pages/MyAccount";
@@ -9,11 +11,10 @@ import Contact from "~/pages/Contact";
 import Checkout from "~/pages/Checkout";
 import Shop from "~/pages/Shop";
 import Product from "~/pages/Product";
-import LayoutChristmas from "~/layouts/LayoutChristmas";
 
 const MainRoutes = {
   path: "/",
-  element: <LayoutChristmas />,
+  element: <LayoutBasic />,
   children: [
     {
       path: "/",

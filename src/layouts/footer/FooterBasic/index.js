@@ -4,7 +4,7 @@ import { animateScroll } from "react-scroll";
 import FooterCopyright from "./FooterCopyright";
 import FooterNewsletter from "./FooterNewsletter";
 
-const FooterOne = () => {
+const FooterBasic = () => {
   const [scroll, setScroll] = useState(0);
   const [top, setTop] = useState(0);
 
@@ -79,14 +79,11 @@ const FooterOne = () => {
           </div>
         </div>
       </div>
-      <button
-        className={`scroll-top ${scroll > top ? "show" : ""}`}
-        onClick={() => scrollToTop()}
-      >
+      <button className={`scroll-top ${scroll > top ? "show" : ""}`} onClick={() => scrollToTop()}>
         <i className="fa fa-angle-double-up"></i>
       </button>
     </footer>
   );
 };
 
-export default FooterOne;
+export default FooterBasic;

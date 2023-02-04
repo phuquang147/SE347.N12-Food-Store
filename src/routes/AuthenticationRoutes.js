@@ -1,10 +1,10 @@
-import LayoutThree from "~/layouts/LayoutThree";
+import LayoutAuthentication from "~/layouts/LayoutAuthentication";
 import Login from "~/pages/Login";
 import Register from "~/pages/Register";
 
 const AuthenticationRoutes = {
   path: "/",
-  element: <LayoutThree />,
+  element: <LayoutAuthentication />,
   children: [
     {
       path: "/login",

@@ -5,7 +5,7 @@ import Logo from "~/components/header/Logo";
 import MobileMenu from "~/components/header/MobileMenu";
 import NavMenu from "~/components/header/NavMenu";
 
-const HeaderOne = () => {
+const HeaderBasic = () => {
   const [scroll, setScroll] = useState(0);
   const [headerTop, setHeaderTop] = useState(0);
 
@@ -50,4 +50,4 @@ const HeaderOne = () => {
   );
 };
 
-export default HeaderOne;
+export default HeaderBasic;
