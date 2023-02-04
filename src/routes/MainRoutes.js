@@ -9,10 +9,11 @@ import Contact from "~/pages/Contact";
 import Checkout from "~/pages/Checkout";
 import Shop from "~/pages/Shop";
 import Product from "~/pages/Product";
+import LayoutChristmas from "~/layouts/LayoutChristmas";
 
 const MainRoutes = {
   path: "/",
-  element: <LayoutOne />,
+  element: <LayoutChristmas />,
   children: [
     {
       path: "/",
