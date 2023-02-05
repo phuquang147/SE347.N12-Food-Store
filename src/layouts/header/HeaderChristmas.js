@@ -5,7 +5,7 @@ import Logo from "~/components/header/Logo";
 import MobileMenu from "~/components/header/MobileMenu";
 import NavMenu from "~/components/header/NavMenu";
 
-const HeaderBasic = () => {
+const HeaderChristmas = () => {
   const [scroll, setScroll] = useState(0);
   const [headerTop, setHeaderTop] = useState(0);
 
@@ -34,7 +34,7 @@ const HeaderBasic = () => {
         <div className="container">
           <div className="row">
             <div className="col-xl-2 col-lg-2 col-md-6 col-4">
-              <Logo type="horizontal" />
+              <Logo type="christmas" />
             </div>
             <div className="col-xl-8 col-lg-8 d-none d-lg-block">
               <NavMenu />
@@ -50,4 +50,4 @@ const HeaderBasic = () => {
   );
 };
 
-export default HeaderBasic;
+export default HeaderChristmas;

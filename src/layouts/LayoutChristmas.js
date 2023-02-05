@@ -1,17 +1,17 @@
 import { Fragment } from "react";
 import { Outlet, useLocation } from "react-router";
 import FooterChristmas from "./footer/FooterChristmas";
-import HeaderBasic from "./header/HeaderBasic";
 import Snowfall from "react-snowfall";
 import "./LayoutChristmas.scss";
 import { Link } from "react-router-dom";
+import HeaderChristmas from "./header/HeaderChristmas";
 
 const LayoutChristmas = () => {
   const location = useLocation();
 
   return (
     <Fragment>
-      <HeaderBasic />
+      <HeaderChristmas />
       {location.pathname === "/" && (
         <div className="slider-area" style={{ position: "relative" }}>
           <span className="body-effect effect-snow"></span>

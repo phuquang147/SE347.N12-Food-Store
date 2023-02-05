@@ -12,13 +12,7 @@ import {
   deleteFromCart,
 } from "../redux/actions/cartActions";
 
-const Cart = ({
-  cartItems,
-  decreaseQuantity,
-  addToCart,
-  deleteFromCart,
-  deleteAllFromCart,
-}) => {
+const Cart = ({ cartItems, decreaseQuantity, addToCart, deleteFromCart, deleteAllFromCart }) => {
   const [quantityCount] = useState(1);
   const { addToast } = useToasts();
   let cartTotalPrice = 0;
@@ -26,7 +20,7 @@ const Cart = ({
   return (
     <Fragment>
       <MetaTags>
-        <title>Giỏ hàng</title>
+        <title>Giỏ hàng | Organic Shop</title>
       </MetaTags>
       <div className="cart-main-area pt-90 pb-100">
         <div className="container">
@@ -54,42 +48,17 @@ const Cart = ({
                           return (
                             <tr key={key}>
                               <td className="product-thumbnail">
-                                <Link
-                                  to={
-                                    process.env.PUBLIC_URL +
-                                    "/product/" +
-                                    cartItem.id
-                                  }
-                                >
-                                  <img
-                                    className="img-fluid"
-                                    src={
-                                      process.env.PUBLIC_URL + cartItem.image[0]
-                                    }
-                                    alt=""
-                                  />
+                                <Link to={process.env.PUBLIC_URL + "/product/" + cartItem.id}>
+                                  <img className="img-fluid" src={process.env.PUBLIC_URL + cartItem.image[0]} alt="" />
                                 </Link>
                               </td>
 
                               <td className="product-name">
-                                <Link
-                                  to={
-                                    process.env.PUBLIC_URL +
-                                    "/product/" +
-                                    cartItem.id
-                                  }
-                                >
-                                  {cartItem.name}
-                                </Link>
-                                {cartItem.selectedProductColor &&
-                                cartItem.selectedProductSize ? (
+                                <Link to={process.env.PUBLIC_URL + "/product/" + cartItem.id}>{cartItem.name}</Link>
+                                {cartItem.selectedProductColor && cartItem.selectedProductSize ? (
                                   <div className="cart-item-variation">
-                                    <span>
-                                      Color: {cartItem.selectedProductColor}
-                                    </span>
-                                    <span>
-                                      Size: {cartItem.selectedProductSize}
-                                    </span>
+                                    <span>Color: {cartItem.selectedProductColor}</span>
+                                    <span>Size: {cartItem.selectedProductSize}</span>
                                   </div>
                                 ) : (
                                   ""
@@ -97,18 +66,14 @@ const Cart = ({
                               </td>
 
                               <td className="product-price-cart">
-                                <span className="amount">
-                                  {numberWithCommas(cartItem.price)} VNĐ
-                                </span>
+                                <span className="amount">{numberWithCommas(cartItem.price)} VNĐ</span>
                               </td>
 
                               <td className="product-quantity">
                                 <div className="cart-plus-minus">
                                   <button
                                     className="dec qtybutton"
-                                    onClick={() =>
-                                      decreaseQuantity(cartItem, addToast)
-                                    }
+                                    onClick={() => decreaseQuantity(cartItem, addToast)}
                                   >
                                     -
                                   </button>
@@ -120,13 +85,7 @@ const Cart = ({
                                   />
                                   <button
                                     className="inc qtybutton"
-                                    onClick={() =>
-                                      addToCart(
-                                        cartItem,
-                                        addToast,
-                                        quantityCount
-                                      )
-                                    }
+                                    onClick={() => addToCart(cartItem, addToast, quantityCount)}
                                     disabled={
                                       cartItem !== undefined &&
                                       cartItem.quantity &&
@@ -143,17 +102,11 @@ const Cart = ({
                                 </div>
                               </td>
                               <td className="product-subtotal">
-                                {`${numberWithCommas(
-                                  cartItem.price * cartItem.quantity
-                                )} VNĐ`}
+                                {`${numberWithCommas(cartItem.price * cartItem.quantity)} VNĐ`}
                               </td>
 
                               <td className="product-remove">
-                                <button
-                                  onClick={() =>
-                                    deleteFromCart(cartItem, addToast)
-                                  }
-                                >
+                                <button onClick={() => deleteFromCart(cartItem, addToast)}>
                                   <i className="fa fa-times"></i>
                                 </button>
                               </td>
@@ -169,14 +122,10 @@ const Cart = ({
                 <div className="col-lg-12">
                   <div className="cart-shiping-update-wrapper">
                     <div className="cart-shiping-update">
-                      <Link to={process.env.PUBLIC_URL + "/shop"}>
-                        Tiếp tục mua sắm
-                      </Link>
+                      <Link to={process.env.PUBLIC_URL + "/shop"}>Tiếp tục mua sắm</Link>
                     </div>
                     <div className="cart-clear">
-                      <button onClick={() => deleteAllFromCart(addToast)}>
-                        Xóa tất cả
-                      </button>
+                      <button onClick={() => deleteAllFromCart(addToast)}>Xóa tất cả</button>
                     </div>
                   </div>
                 </div>
@@ -186,13 +135,10 @@ const Cart = ({
                 <div className="col-lg-4 col-md-12">
                   <div className="grand-totall">
                     <h4 className="grand-totall-title ">
-                      Tổng tiền{" "}
-                      <span>{`${numberWithCommas(cartTotalPrice)} VNĐ`}</span>
+                      Tổng tiền <span>{`${numberWithCommas(cartTotalPrice)} VNĐ`}</span>
                       {/* <span>100000 VNĐ</span> */}
                     </h4>
-                    <Link to={process.env.PUBLIC_URL + "/checkout"}>
-                      Thanh toán
-                    </Link>
+                    <Link to={process.env.PUBLIC_URL + "/checkout"}>Thanh toán</Link>
                   </div>
                 </div>
               </div>

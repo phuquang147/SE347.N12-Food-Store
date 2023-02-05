@@ -7,10 +7,11 @@ const Home = () => {
   return (
     <Fragment>
       <MetaTags>
-        <title>Trang chủ</title>
+        <title>Trang chủ | Organic Shop</title>
       </MetaTags>
       <FeatureIcon />
       <Banner />
+      {/* <div style={{ margin: "100px 0" }}></div> */}
     </Fragment>
   );
 };

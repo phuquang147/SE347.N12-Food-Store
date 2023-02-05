@@ -1,5 +1,5 @@
-import LayoutBasic from "~/layouts/LayoutBasic";
-// import LayoutChristmas from "~/layouts/LayoutChristmas";
+// import LayoutBasic from "~/layouts/LayoutBasic";
+import LayoutChristmas from "~/layouts/LayoutChristmas";
 // import LayoutNewYear from "~/layouts/LayoutNewYear";
 import About from "~/pages/About";
 import Home from "~/pages/Home";
@@ -14,7 +14,7 @@ import Product from "~/pages/Product";
 
 const MainRoutes = {
   path: "/",
-  element: <LayoutBasic />,
+  element: <LayoutChristmas />,
   children: [
     {
       path: "/",
@@ -37,10 +37,6 @@ const MainRoutes = {
       element: <Cart />,
     },
     {
-      path: "/not-found",
-      element: <PageNotFound />,
-    },
-    {
       path: "/contact",
       element: <Contact />,
     },
@@ -55,6 +51,10 @@ const MainRoutes = {
     {
       path: "/product/:id",
       element: <Product />,
+    },
+    {
+      path: "*",
+      element: <PageNotFound />,
     },
   ],
 };

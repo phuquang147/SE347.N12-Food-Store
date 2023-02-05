@@ -8,7 +8,7 @@ const MyAccount = () => {
   return (
     <Fragment>
       <MetaTags>
-        <title>Tài khoản</title>
+        <title>Tài khoản | Organic Shop</title>
       </MetaTags>
 
       <div className="pb-80 pt-100">
@@ -20,9 +20,7 @@ const MyAccount = () => {
                   <Card className="single-my-account mb-20">
                     <Card.Header className="panel-heading">
                       <Accordion.Item eventKey="0">
-                        <Accordion.Header className="panel-title">
-                          1. Chỉnh sửa thông tin tài khoản
-                        </Accordion.Header>
+                        <Accordion.Header className="panel-title">1. Chỉnh sửa thông tin tài khoản</Accordion.Header>
                         <Accordion.Body>
                           <Card.Body>
                             <div className="myaccount-info-wrapper">
@@ -76,9 +74,7 @@ const MyAccount = () => {
                   <Card className="single-my-account mb-20">
                     <Card.Header className="panel-heading">
                       <Accordion.Item eventKey="1">
-                        <Accordion.Header className="panel-title">
-                          2. Thay đổi mật khẩu
-                        </Accordion.Header>
+                        <Accordion.Header className="panel-title">2. Thay đổi mật khẩu</Accordion.Header>
                         <Accordion.Body>
                           <Card.Body>
                             <div className="myaccount-info-wrapper">
@@ -114,9 +110,7 @@ const MyAccount = () => {
                   <Card className="single-my-account mb-20">
                     <Card.Header className="panel-heading">
                       <Accordion.Item eventKey="2">
-                        <Accordion.Header className="panel-title">
-                          3. Chỉnh sửa danh sách địa chỉ
-                        </Accordion.Header>
+                        <Accordion.Header className="panel-title">3. Chỉnh sửa danh sách địa chỉ</Accordion.Header>
                         <Accordion.Body>
                           <Card.Body>
                             <div className="myaccount-info-wrapper">
@@ -136,9 +130,7 @@ const MyAccount = () => {
                                   </div>
                                   <div className="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
                                     <div className="entries-edit-delete text-center">
-                                      <button className="edit">
-                                        Chỉnh sửa
-                                      </button>
+                                      <button className="edit">Chỉnh sửa</button>
                                       <button>Xóa</button>
                                     </div>
                                   </div>

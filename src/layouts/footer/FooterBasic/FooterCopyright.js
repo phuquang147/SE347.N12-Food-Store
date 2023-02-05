@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import Logo from "~/components/header/Logo";
 
 const FooterCopyright = () => {
   return (
     <div className="copyright">
       <div className="footer-logo">
         <Link to="/">
-          <img alt="" src="/assets/img/logo.png" />
+          <Logo type="vertical" />
         </Link>
       </div>
       <p>&copy; {new Date().getFullYear()}</p>

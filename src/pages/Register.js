@@ -11,7 +11,7 @@ const Register = () => {
   return (
     <Fragment>
       <MetaTags>
-        <title>Đăng ký</title>
+        <title>Đăng ký | Organic Shop</title>
       </MetaTags>
 
       <div className="container pt-100 pb-100">

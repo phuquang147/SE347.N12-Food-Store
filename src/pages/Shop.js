@@ -38,11 +38,7 @@ const Shop = ({ products }) => {
 
   useEffect(() => {
     let sortedProducts = getSortedProducts(products, sortType, sortValue);
-    const filterSortedProducts = getSortedProducts(
-      sortedProducts,
-      filterSortType,
-      filterSortValue
-    );
+    const filterSortedProducts = getSortedProducts(sortedProducts, filterSortType, filterSortValue);
     sortedProducts = filterSortedProducts;
     setSortedProducts(sortedProducts);
     setCurrentData(sortedProducts.slice(offset, offset + pageLimit));
@@ -51,7 +47,7 @@ const Shop = ({ products }) => {
   return (
     <Fragment>
       <MetaTags>
-        <title>Shop</title>
+        <title>Shop | Organic Shop</title>
       </MetaTags>
 
       <div className="shop-area pt-95 pb-100">

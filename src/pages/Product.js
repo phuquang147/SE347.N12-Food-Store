@@ -16,7 +16,7 @@ const Product = ({ products, cartItems, wishlistItems }) => {
   return (
     <Fragment>
       <MetaTags>
-        <title>{currentProduct.name}</title>
+        <title>{currentProduct.name} | Organic Shop</title>
       </MetaTags>
 
       <div className="pt-100 pb-100">

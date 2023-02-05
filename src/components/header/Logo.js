@@ -12,6 +12,9 @@ const Logo = ({ type }) => {
     case "tet":
       img = "/assets/img/logo-horizontal-lnn.png";
       break;
+    case "christmas":
+      img = "/assets/img/logo-horizontal-christmas.png";
+      break;
     default:
       img = "/assets/img/logo.png";
   }

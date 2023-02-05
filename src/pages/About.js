@@ -8,7 +8,7 @@ const About = () => {
   return (
     <Fragment>
       <MetaTags>
-        <title>Về chúng tôi</title>
+        <title>Về chúng tôi | Organic Shop</title>
       </MetaTags>
 
       <SectionTitleWithText spaceTopClass="pt-100" spaceBottomClass="pb-95" />

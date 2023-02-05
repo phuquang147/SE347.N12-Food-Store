@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <Fragment>
       <MetaTags>
-        <title>Liên hệ</title>
+        <title>Liên hệ | Organic Shop</title>
       </MetaTags>
 
       <div className="contact-area pt-100 pb-100">
@@ -63,11 +63,7 @@ const Contact = () => {
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="//pinterest.com"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
+                      <a href="//pinterest.com" target="_blank" rel="noreferrer">
                         <i className="fa fa-pinterest-p" />
                       </a>
                     </li>
@@ -104,18 +100,10 @@ const Contact = () => {
                       <input name="email" placeholder="Email*" type="email" />
                     </div>
                     <div className="col-lg-12">
-                      <input
-                        name="subject"
-                        placeholder="Tiêu đề*"
-                        type="text"
-                      />
+                      <input name="subject" placeholder="Tiêu đề*" type="text" />
                     </div>
                     <div className="col-lg-12">
-                      <textarea
-                        name="message"
-                        placeholder="Lời nhắn của bạn*"
-                        defaultValue={""}
-                      />
+                      <textarea name="message" placeholder="Lời nhắn của bạn*" defaultValue={""} />
                       <button className="submit" type="submit">
                         Gửi
                       </button>
