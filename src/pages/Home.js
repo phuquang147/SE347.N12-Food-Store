@@ -9,9 +9,9 @@ const Home = () => {
       <MetaTags>
         <title>Trang chủ | Organic Shop</title>
       </MetaTags>
-      <FeatureIcon />
-      <Banner />
-      {/* <div style={{ margin: "100px 0" }}></div> */}
+      {/* <FeatureIcon />
+      <Banner /> */}
+      <div style={{ margin: "100px 0" }}></div>
     </Fragment>
   );
 };

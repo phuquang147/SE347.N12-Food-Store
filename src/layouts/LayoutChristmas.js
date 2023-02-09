@@ -18,7 +18,7 @@ const LayoutChristmas = () => {
           <div
             className="single-slider slider-height"
             style={{
-              backgroundImage: 'url("https://flone.jamstacktemplates.dev/assets/img/slider/slider-35.jpg")',
+              backgroundImage: "url('/assets/img/slider/christmas2.png')",
               backgroundPosition: "50%",
               backgroundSize: "cover",
             }}
@@ -39,7 +39,7 @@ const LayoutChristmas = () => {
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-sm-6">
                   <div className="slider-single-img">
-                    <img src="https://flone.jamstacktemplates.dev/assets/img/slider/single-slider-12.png" alt="" />
+                    <img src="/assets/img/slider/christmas1.png" alt="" />
                   </div>
                 </div>
               </div>

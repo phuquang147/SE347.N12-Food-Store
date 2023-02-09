@@ -25,7 +25,7 @@ const FooterTwo = () => {
     <footer
       className="footer-area bg-gray"
       style={{
-        backgroundImage: 'url("https://flone.jamstacktemplates.dev/assets/img/bg/footer-bg.jpg")',
+        backgroundImage: 'url("/assets/img/slider/christmas3.png")',
         backgroundPosition: "center",
         color: "white !important",
       }}
